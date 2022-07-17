@@ -1,0 +1,116 @@
+.container{
+    margin-top: 65px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.container .positionName{
+    font-family: var(--ff-primary);
+    font-weight: 800;
+    font-size: 224px;
+    color: #FFFFFF;
+    text-shadow: 18px 21px 30px rgba(0, 0, 0, 0.04);
+    position: absolute;
+    top: 0;
+    z-index: 0;
+}
+.mainInfo{
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+    margin-top: 177px;
+    padding: 0 262px;
+    width: 100%;
+}
+.mainInfo .mainTitle{
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--c-primary);
+    letter-spacing: 0.2em;
+}
+.mainInfo .positionSubName{
+    color: var(--c-primary);
+    font-weight: 700;
+    font-size: 48px;
+}
+.positionSubNameMargin{
+    margin-left: -3px;
+}
+.descriptionWrap{
+    max-width: 1000px;
+    text-align: left;
+}
+.description{
+    font-family: var(--ff-primary);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--c-primary);
+    letter-spacing: 0.1em;
+    line-height: 20px;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-left: -20px;
+}
+.buttons .textSeparator{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.animateLink{
+    color: var(--c-primary);
+    position: relative;
+    text-decoration: none;
+    flex-grow: 1;
+    overflow: hidden;
+    display: block;
+    text-align: center;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+.animateLink span {
+    display: block;
+    transition: transform 100ms cubic-bezier(0.01,0,0,0.01);
+}
+.animateLink:after {
+    content: attr(data-link-alt);
+    display: inline;
+    position: absolute;
+    transition: top 100ms cubic-bezier(0.01,0,0,0.01);
+    top: 100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.animateLink:hover span {
+    transform: translateY(-200%);
+}
+.animateLink:hover:after {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@keyframes rainbow {
+    0% {
+        background: #00BCD4;
+    }
+    25% {
+        background: #00C853;
+    }
+    50% {
+        background: #C62828;
+    }
+    75% {
+        background: #4527A0;
+    }
+    100% {
+        background: #00BCD4;
+    }
+}

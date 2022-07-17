@@ -1,0 +1,26 @@
+.main{
+    display: flex;
+    align-items: center;
+}
+.mainText{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin-left: 17px;
+}
+.mainText .name{
+    font-family: var(--ff-primary);
+    font-style: normal;
+    font-weight: 700;
+    color: var('--c-primary');
+    font-size: 24px;
+}
+.subTitle{
+    font-family: var(--ff-secondary);
+    font-style: normal;
+    font-weight: 400;
+    color: var('--c-primary');
+    font-size: 16px;
+    margin-top: 5px;
+}
