@@ -1,0 +1,48 @@
+.container{
+    padding-top: 265px;
+}
+.aboutSection{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.aboutTitleWrap{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.aboutTitle{
+    font-family: var(--ff-primary);
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    color: var(--c-primary);
+    text-align: left;
+}
+.aboutSubTitle{
+    font-family: var(--ff-primary);
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--c-primary);
+    text-align: left;
+    margin-top: 10px;
+}
+.myCVWrap{
+    display: flex;
+    width: 60%;
+    margin-top: 40px;
+}
+.CVInfo{
+    border-left: 1px solid var(--c-primary);
+    margin-left: 15px;
+    padding: 15px 5px 15px 15px;
+}
+.CVInfoTitle{
+    font-family: var(--ff-primary);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    color: var(--c-primary);
+}

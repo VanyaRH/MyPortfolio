@@ -3,8 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import { Header } from './components/header/header';
 import {ParticlesComponent} from "./components/Particles/particles";
-import {About} from "./components/sections/main/mainSection";
+import {AboutTitle} from "./components/sections/aboutTitle/aboutTitle";
 import { Loader } from './components/common/loader/loader';
+import { AboutInfo } from './components/sections/aboutInfo/aboutInfo';
 
 function App() {
     let [showLoader, setLoader] = useState(true);
@@ -15,8 +16,9 @@ function App() {
     <div className="App">
         <Loader show={showLoader}/>
         <Header/>
-        <About/>
-        <ParticlesComponent />
+        <AboutTitle/>
+        <AboutInfo/>
+        {/*<ParticlesComponent />*/}
     </div>
   );
 }

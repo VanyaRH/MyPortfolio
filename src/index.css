@@ -1,14 +1,22 @@
 :root {
     --c-primary: #474747;
+    --c-white: #ffffff;
+    --c-black: #000000;
     --c-secondary: #A3A3A3;
     --ff-primary: 'Montserrat';
     --ff-secondary: 'Michroma';
 }
 
-p, h1, h2, h3, h4, h5, h6, span, ul, li{
+p, h1, h2, h3, h4, h5, h6, span, ul, li, body{
     margin: 0;
 }
 body{
     user-select: none;
     font-family: var(--ff-primary);
+}
+.container{
+    padding: 0 260px;
+}
+.App{
+    padding-bottom: 50px;
 }

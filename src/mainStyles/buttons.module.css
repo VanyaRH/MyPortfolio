@@ -19,3 +19,21 @@
     color: #474747;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
 }
+.downloadCV{
+    white-space: nowrap;
+    background: var(--c-white);
+    border-radius: 40px;
+    font-family: var(--ff-primary);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--c-primary);
+    border: none;
+    transition: all .5s ease;
+    cursor: pointer;
+    align-self: center;
+}
+.downloadCV:hover{
+    transition: all .5s ease;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+}

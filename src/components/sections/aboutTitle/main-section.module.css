@@ -1,6 +1,6 @@
 .container{
     margin-top: 65px;
-    width: 100%;
+    width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,7 +23,6 @@
     align-items: start;
     gap: 5px;
     margin-top: 177px;
-    padding: 0 262px;
     width: 100%;
 }
 .mainInfo .mainTitle{
