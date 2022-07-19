@@ -10,6 +10,9 @@
 p, h1, h2, h3, h4, h5, h6, span, ul, li, body{
     margin: 0;
 }
+ul, li{
+    list-style-type: none;
+}
 body{
     user-select: none;
     font-family: var(--ff-primary);
@@ -19,4 +22,76 @@ body{
 }
 .App{
     padding-bottom: 50px;
+}
+.separator{
+    width: 300px;
+    height: 1px;
+    background: var(--c-primary);
+    box-shadow: 0px 0px 8px 2px #CCCCCC;
+    opacity: .1;
+    margin: 35px auto;
+}
+.flexRow{
+    display: flex;
+}
+.justify-center{
+    justify-content: center;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes line-show {
+    from {
+        margin: 0px 100px;
+    }
+    to {
+        margin: 0px;
+    }
+}
+/* Standard syntax */
+@keyframes line-show {
+    from {
+        margin: 0px 100px;
+    }
+    to {
+        margin: 0px;
+    }
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes p-show {
+    from {
+        color: white;
+    }
+    to {
+        color: #282828;
+    }
+}
+/* Standard syntax */
+@keyframes p-show {
+    from {
+        color: white;
+    }
+    to {
+        color: #282828;
+    }
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes shadow-show {
+    from {
+        -webkit-box-shadow: 0px 0px 0px 0px #e0e0e0;
+        box-shadow: 0px 0px 0px 0px #e0e0e0;
+    }
+    to {
+        -webkit-box-shadow: -20px -20px 0px 0px #fb968b;
+        box-shadow: -20px -20px 0px 0px #fb968b;
+    }
+}
+/* Standard syntax */
+@keyframes shadow-show {
+    from {
+        -webkit-box-shadow: 0px 0px 0px 0px #e0e0e0;
+        box-shadow: 0px 0px 0px 0px #e0e0e0;
+    }
+    to {
+        -webkit-box-shadow: -20px -20px 0px 0px #fb968b;
+        box-shadow: -20px -20px 0px 0px #fb968b;
+    }
 }
