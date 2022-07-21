@@ -2,6 +2,7 @@ import styles from './about-info.module.css';
 import {Text} from "../../common/text/text";
 import buttons from '../../../mainStyles/buttons.module.css';
 import pcGif from '../../../assets/images/icons/pc.gif';
+import {Card} from "./components/card/card";
 
 export const AboutInfo = () => {
     return (
@@ -70,50 +71,18 @@ export const AboutInfo = () => {
                 <div className={`flexRow ${styles.innerSection}`}>
                         <div className={styles.inner}>
                             <div className={styles.innerList}>
-                                <div className={styles.innerListBlock}>
-                                    <div className={styles.ciIcon}>
-                                        <img className={styles.gif} src={pcGif} alt=""/>
-                                    </div>
-                                    <div className={styles.ciText}>
-                                        <h4>Copywriting</h4>
-                                        <p>Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor
+                                <Card icon={pcGif} title={'Copywriting'} description={`Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor
                                             bibendum massa, sit amet ultricies ex lectus scelerisque nibh. Ut non
-                                            sodales.</p>
-                                    </div>
-                                </div>
-                                <div className={styles.innerListBlock}>
-                                    <div className={styles.ciIcon}>
-                                        <img className={styles.gif} src={pcGif} alt=""/>
-                                    </div>
-                                    <div className={styles.ciText}>
-                                        <h4>Management</h4>
-                                        <p>Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor
+                                            sodales.`} />
+                                <Card icon={pcGif} title={'Copywriting'} description={`Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor
                                             bibendum massa, sit amet ultricies ex lectus scelerisque nibh. Ut non
-                                            sodales.</p>
-                                    </div>
-                                </div>
-                                <div className={styles.innerListBlock}>
-                                    <div className={styles.ciIcon}>
-                                        <img className={styles.gif} src={pcGif} alt=""/>
-                                    </div>
-                                    <div className={styles.ciText}>
-                                        <h4>Copywriting</h4>
-                                        <p>Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor
+                                            sodales.`} />
+                                <Card icon={pcGif} title={'Copywriting'} description={`Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor
                                             bibendum massa, sit amet ultricies ex lectus scelerisque nibh. Ut non
-                                            sodales.</p>
-                                    </div>
-                                </div>
-                                <div className={styles.innerListBlock}>
-                                    <div className={styles.ciIcon}>
-                                        <img className={styles.gif} src={pcGif} alt=""/>
-                                    </div>
-                                    <div className={styles.ciText}>
-                                        <h4>Management</h4>
-                                        <p>Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor
+                                            sodales.`} />
+                                <Card icon={pcGif} title={'Copywriting'} description={`Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor
                                             bibendum massa, sit amet ultricies ex lectus scelerisque nibh. Ut non
-                                            sodales.</p>
-                                    </div>
-                                </div>
+                                            sodales.`} />
                             </div>
                         </div>
                     </div>

@@ -99,23 +99,15 @@
     margin-top: 10px;
     text-align: center;
 }
-.gif{
-    width: 35px;
-}
+
 .innerSection{
     margin-top: 40px;
     justify-content: center;
 }
-.innerListBlock{
-    max-width: 300px;
-    box-shadow: 0px 4px 30px rgb(0 0 0 / 20%);
-    margin: 0 auto;
-    padding: 20px;
-}
-.inner{
-}
+
 .innerList{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    display: flex;
+    transform: translateX(100px);
+    /*grid-template-columns: repeat(2, 1fr);
+    gap: 40px;*/
 }

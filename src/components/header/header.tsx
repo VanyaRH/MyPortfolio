@@ -6,23 +6,38 @@ import styles from './header.module.css';
 export const Header = () => {
 
     const [sticky, setSticky] = useState("");
+    const [hidden, setHidden] = useState("");
 
     // on render, set listener
     useEffect(() => {
-        window.addEventListener("scroll", isSticky);
+        window.addEventListener("mousewheel", isSticky);
         return () => {
-            window.removeEventListener("scroll", isSticky);
+            window.removeEventListener("mousewheel", isSticky);
         };
     }, []);
 
-    const isSticky = () => {
+    const updateMenu = (event: any) => {
         const scrollTop = window.scrollY;
-        const stickyClass = scrollTop >= 10 ? styles.isSticky : "";
+        let stickyClass = "", hiddenClass = '';
+
+        if (event.wheelDelta >= 0) {
+            hiddenClass = '';
+            stickyClass = scrollTop >= 110 ? styles.isSticky : "";
+        } else {
+            stickyClass = styles.isSticky;
+            hiddenClass = scrollTop >= 110 ? styles.isHidden : "";
+        }
+
         setSticky(stickyClass);
+        setHidden(hiddenClass);
+    }
+
+    const isSticky = (event: any) => {
+        setTimeout(() => { updateMenu(event); }, 100)
     };
 
     return (
-        <div className={`${styles.header} ${sticky}`}>
+        <div className={`${styles.header} ${sticky} ${hidden}`}>
             <MyLogo />
             <MyMenu />
         </div>
