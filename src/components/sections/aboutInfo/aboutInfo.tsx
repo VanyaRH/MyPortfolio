@@ -2,12 +2,17 @@ import styles from './about-info.module.css';
 import {Text} from "../../common/text/text";
 import buttons from '../../../mainStyles/buttons.module.css';
 import pcGif from '../../../assets/images/icons/pc.gif';
+import avatar from '../../../assets/images/avatar.jpg';
 import {Card} from "./components/card/card";
+import {ExperienceCard, ExperienceCardTypes} from "./components/experienceCard/experienceCard";
 
 export const AboutInfo = () => {
     return (
         <section className={`container ${styles.container}`}>
             <div className={styles.aboutSection}>
+                <div className={styles.avatarWrap}>
+                    <img src={avatar} alt="Ivan Rosokha"/>
+                </div>
                 <div className={styles.aboutTitleWrap}>
                     <Text customClass={styles.aboutTitle} text={'A FEW WORDS ABOUT ME'}/>
                     <Text customClass={styles.aboutSubTitle} text={'My business card site where you will learn about my capabilities'}/>
@@ -87,6 +92,12 @@ export const AboutInfo = () => {
                         </div>
                     </div>
                 <div className="white-space-30"></div>
+            </div>
+            <div className="separator"></div>
+            <div className={styles.myExperienceInfoWrap}>
+                <ExperienceCard title={'Projects implemented'} value={'10+'} type={ExperienceCardTypes.count} />
+                <ExperienceCard title={'Positive feedback'} value={'40+'} type={ExperienceCardTypes.count} />
+                <ExperienceCard title={'In the development and promotion of sites.'} value={'3'} type={ExperienceCardTypes.period} />
             </div>
         </section>
     )

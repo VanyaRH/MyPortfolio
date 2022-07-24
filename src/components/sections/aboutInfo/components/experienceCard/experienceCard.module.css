@@ -1,0 +1,41 @@
+.card{
+    background: var(--c-white);
+    box-shadow: 0px 19px 63px #CCCCCC;
+    border-radius: 25px;
+    padding: 34px 40px;
+    max-width: 205px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.card .cardTitle {
+
+}
+.card .cardTitle .customTitle{
+    font-family: var(--ff-primary);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--c-primary);
+    text-align: left;
+}
+.cardSubTitle{
+    font-family: var(--ff-primary);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--c-primary);
+    text-transform: uppercase;
+    text-align: left;
+}
+.customSubTitle{
+    font-family: var(--ff-primary);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--c-primary);
+    margin-left: 5px;
+    margin-bottom: 2px;
+}

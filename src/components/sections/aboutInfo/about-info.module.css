@@ -5,6 +5,18 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    position: relative;
+}
+.avatarWrap{
+    position: absolute;
+    top: -230px;
+    left: -11px;
+    width: 450px;
+    height: 200px;
+}
+.avatarWrap img{
+    width: 100%;
+    border-radius: 50%;
 }
 .aboutTitleWrap{
     width: 60%;
@@ -103,6 +115,7 @@
 .innerSection{
     margin-top: 40px;
     justify-content: center;
+    margin-bottom: 80px;
 }
 
 .innerList{
@@ -110,4 +123,11 @@
     transform: translateX(100px);
     /*grid-template-columns: repeat(2, 1fr);
     gap: 40px;*/
+}
+.myExperienceInfoWrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 60px;
 }
