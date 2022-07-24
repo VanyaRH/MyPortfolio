@@ -42,9 +42,9 @@ export const ExperienceCard = (props: ExperienceCardI) => {
         // @ts-ignore
         observer.observe(myRef.current);
     }*/
-
+    /*ref={myRef}*/
     return (
-        <div ref={myRef} className={styles.card}>
+        <div  className={styles.card}>
             <div className={styles.cardTitle}>
                 { props.type === ExperienceCardTypes.count && <Text customClass={styles.customTitle} text={props.value} /> }
                 { props.type === ExperienceCardTypes.period && <div className={` ${styles.periodTitle}`}>
