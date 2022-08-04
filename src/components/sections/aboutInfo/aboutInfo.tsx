@@ -2,6 +2,10 @@ import styles from './about-info.module.css';
 import {Text} from "../../common/text/text";
 import buttons from '../../../mainStyles/buttons.module.css';
 import pcGif from '../../../assets/images/icons/pc.gif';
+import designingGif from '../../../assets/images/icons/designing.gif';
+import developmentGif from '../../../assets/images/icons/development.gif';
+import optimizationGif from '../../../assets/images/icons/optimization.gif';
+import supportGif from '../../../assets/images/icons/support.gif';
 import avatar from '../../../assets/images/avatar.jpg';
 import {Card} from "./components/card/card";
 import {ExperienceCard, ExperienceCardTypes} from "./components/experienceCard/experienceCard";
@@ -76,28 +80,19 @@ export const AboutInfo = () => {
                 <div className={`flexRow ${styles.innerSection}`}>
                         <div className={styles.inner}>
                             <div className={styles.innerList}>
-                                <Card icon={pcGif} title={'Copywriting'} description={`Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor
-                                            bibendum massa, sit amet ultricies ex lectus scelerisque nibh. Ut non
-                                            sodales.`} />
-                                <Card icon={pcGif} title={'Copywriting'} description={`Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor
-                                            bibendum massa, sit amet ultricies ex lectus scelerisque nibh. Ut non
-                                            sodales.`} />
-                                <Card icon={pcGif} title={'Copywriting'} description={`Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor
-                                            bibendum massa, sit amet ultricies ex lectus scelerisque nibh. Ut non
-                                            sodales.`} />
-                                <Card icon={pcGif} title={'Copywriting'} description={`Pellentesque pellentesque, ipsum sit amet auctor accumsan, odio tortor
-                                            bibendum massa, sit amet ultricies ex lectus scelerisque nibh. Ut non
-                                            sodales.`} />
+                                <Card icon={designingGif} title={'Designing'} description={`Designing the main work and functioning of the project according to the given technical task. Division into stages. A plan for full implementation, taking into account possible complications and shortcomings that will require more time.`} />
+                                <Card icon={developmentGif} title={'Development'} description={`Development of the project in compliance with all the requirements and rules specified in the previously designed plan. Completion of all tasks in a given time.`} />
+                                <Card icon={optimizationGif} title={'Optimization'} description={`Optimization of the product after its full execution and during its execution. Replacing difficult methods and algorithms with simpler ones, but with the same performance.`} />
+                                <Card icon={supportGif} title={'Support'} description={`Project support after its release. Optimization of already written code and addition of new functionality when necessary.`} />
                             </div>
                         </div>
                     </div>
                 <div className="white-space-30"></div>
             </div>
-            <div className="separator"></div>
             <div className={styles.myExperienceInfoWrap}>
-                <ExperienceCard title={'Projects implemented'} value={'10+'} type={ExperienceCardTypes.count} />
-                <ExperienceCard title={'Positive feedback'} value={'40+'} type={ExperienceCardTypes.count} />
-                <ExperienceCard title={'In the development and promotion of sites.'} value={'3'} type={ExperienceCardTypes.period} />
+                <ExperienceCard title={'Projects implemented'} value={10} type={ExperienceCardTypes.count} />
+                <ExperienceCard title={'Positive feedback'} value={40} type={ExperienceCardTypes.count} />
+                <ExperienceCard title={'In the development and promotion of sites.'} value={3} type={ExperienceCardTypes.period} />
             </div>
         </section>
     )

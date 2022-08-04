@@ -20,6 +20,7 @@
     font-size: 48px;
     color: var(--c-primary);
     text-align: left;
+    position: relative;
 }
 .cardSubTitle{
     font-family: var(--ff-primary);
@@ -29,6 +30,18 @@
     color: var(--c-primary);
     text-transform: uppercase;
     text-align: left;
+}
+.card .cardTitle .customTitle.isUpCount:after{
+    content: '+';
+    position: absolute;
+    right: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--ff-primary);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 37px;
+    color: var(--c-primary);
 }
 .customSubTitle{
     font-family: var(--ff-primary);

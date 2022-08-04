@@ -107,7 +107,6 @@
     font-weight: 700;
     font-size: 26px;
     color: var(--c-primary);
-    text-align: left;
     margin-top: 10px;
     text-align: center;
 }
@@ -115,19 +114,21 @@
 .innerSection{
     margin-top: 40px;
     justify-content: center;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 }
 
 .innerList{
-    display: flex;
-    transform: translateX(100px);
-    /*grid-template-columns: repeat(2, 1fr);
-    gap: 40px;*/
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    box-shadow: 0px 4px 30px rgb(0 0 0 / 20%);
+    padding: 30px 70px;
+    border-radius: 20px;
+    background: #fff;
 }
 .myExperienceInfoWrap{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 40px;
-    margin-top: 60px;
 }

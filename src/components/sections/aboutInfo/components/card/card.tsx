@@ -22,7 +22,7 @@ export const Card = (props: ICard) => {
             </div>
             <div className={styles.ciText}>
                 <h4><Text customClass={styles.aboutTitle} text={props.title}/></h4>
-                <Text customClass={styles.aboutTitle} text={props.description}/>
+                <p className={styles.descriptionWrap}><Text customClass={styles.aboutTitle} text={props.description}/></p>
             </div>
         </div>
     )

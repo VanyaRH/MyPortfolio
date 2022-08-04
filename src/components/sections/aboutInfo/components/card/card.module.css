@@ -1,15 +1,19 @@
 .innerListBlock{
     max-width: 300px;
     /*box-shadow: 0px 4px 30px rgb(0 0 0 / 20%);*/
-    box-shadow: -1rem 0 3rem rgb(0 0 0 / 20%);
     margin: 0 auto;
     padding: 20px;
     background: var(--c-white);
-    border-radius: 88px 12px 88px 12px/8px 92px 8px 92px;
+    /*border-radius: 88px 12px 88px 12px/8px 92px 8px 92px;*/
 }
 .gif{
     width: 35px;
 }
+.descriptionWrap{
+    display: block;
+    margin-top: 20px;
+}
+/*
 .innerListBlock:nth-child(1){
     transform: translateX(0);
     transition: .5s all ease;
@@ -40,4 +44,4 @@
 .innerListBlock:nth-child(4){
     transform: translateX(-300px);
     z-index: 4;
-}
+}*/

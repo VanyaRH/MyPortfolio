@@ -16,6 +16,7 @@ ul, li{
 body{
     user-select: none;
     font-family: var(--ff-primary);
+    color: var(--c-primary);
 }
 .container{
     padding: 0 260px;
@@ -94,4 +95,8 @@ body{
         -webkit-box-shadow: -20px -20px 0px 0px #fb968b;
         box-shadow: -20px -20px 0px 0px #fb968b;
     }
+}
+
+.slick-slide{
+    border: none;
 }

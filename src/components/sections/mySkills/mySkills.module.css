@@ -1,0 +1,159 @@
+.separator{
+    width: 100%;
+    height: 100px;
+}
+.wrap{
+    margin-top: 100px;
+}
+.titleText{
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    color: var(--c-primary);
+}
+.mySkills{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-top: 45px;
+}
+.centerBar{
+    width: 120px;
+}
+.roundSeparator{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.roundSeparator:not(:first-child){
+    margin: 196px 0;
+}
+.roundSeparator:before{
+    content: '';
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 2px solid black;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    position: absolute;
+}
+
+.roundSeparator.left:before{
+    transform: rotate(225deg);
+}
+
+.roundSeparator.right:before{
+    transform: rotate(45deg);
+}
+
+.roundSeparator:after{
+    content: '';
+    width: 120px;
+    height: 2px;
+    background: var(--c-black);
+    position: absolute;
+}
+
+.roundSeparator.right:after{
+    right: 63px;
+}
+.roundSeparator.left:after{
+    left: 63px;
+}
+.round{
+    border: 7px solid var(--c-black);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+}
+.round::after, .round::before{
+    content: '';
+    width: 2px;
+    height: 100px;
+    background: var(--c-black);
+    position: absolute;
+}
+.round::before{
+    top: 75px;
+}
+.round::after{
+    bottom: 75px;
+}
+.leftBar, .rightBar{
+    width: 100%;
+}
+.centerBar{
+    padding-top: 100px;
+}
+.bar{
+    padding-top: 70px;
+    z-index: 2;
+}
+.skillItem{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 167px;
+}
+.skillItem.left{
+    justify-content: flex-end;
+}
+.skillImage{
+    margin: 0 80px;
+}
+
+.skillItem.right{
+    justify-content: flex-start;
+}
+.skillInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.skillInfo .value{
+    font-weight: 700;
+    font-size: 48px;
+}
+.skillDescription{
+    display: flex;
+    flex-direction: column;
+}
+.skillDescription.left{
+    align-items: flex-end;
+    text-align: right;
+    padding-right: 20px;
+}
+.skillDescription.right{
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 20px;
+}
+.skillDescription .skillName{
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: var(--c-black);
+}
+.skillDescription .skillTitle{
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--c-black);
+    margin-top: 12px;
+}
+.skillDescription .skillUsingTime{
+    font-weight: 700;
+    font-size: 12px;
+    color: var(--c-primary);
+}
+.skillDescription .description{
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--c-black);
+    margin-top: 20px;
+}
