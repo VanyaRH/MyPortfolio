@@ -8,6 +8,7 @@ import { Loader } from './components/common/loader/loader';
 import { AboutInfo } from './components/sections/aboutInfo/aboutInfo';
 import {MySkills} from "./components/sections/mySkills/mySkills";
 import {MyProjects} from "./components/sections/myProjects/myProjects";
+import {Contacts} from "./components/sections/contacts/contacts";
 
 function App() {
     let [showLoader, setLoader] = useState(true);
@@ -22,6 +23,7 @@ function App() {
         <AboutInfo/>
         <MySkills/>
         <MyProjects separator={true}/>
+        <Contacts />
         {/*<ParticlesComponent />*/}
     </div>
   );
