@@ -9,10 +9,11 @@ import supportGif from '../../../assets/images/icons/support.gif';
 import avatar from '../../../assets/images/avatar.jpg';
 import {Card} from "./components/card/card";
 import {ExperienceCard, ExperienceCardTypes} from "./components/experienceCard/experienceCard";
+import {Sections} from "../../../variables/sections";
 
 export const AboutInfo = () => {
     return (
-        <section className={`container ${styles.container}`}>
+        <section id="aboutMe" className={`container ${styles.container}`}>
             <div className={styles.aboutSection}>
                 <div className={styles.avatarWrap}>
                     <img src={avatar} alt="Ivan Rosokha"/>

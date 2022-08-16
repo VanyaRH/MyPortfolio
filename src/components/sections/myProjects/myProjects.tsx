@@ -10,7 +10,7 @@ interface IMyProjects{
 
 export const MyProjects = (props: IMyProjects) => {
     return (
-        <section className={`${styles.wrap}`}>
+        <section id="projects" className={`${styles.wrap}`}>
             {props?.separator && <div className={styles.separatorWrap}>
                 <Text customClass={styles.separator} text={'Let’s work together'} />
             </div>}

@@ -1,0 +1,99 @@
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--c-white);
+    transition: all 800ms ease;
+    transform: translateY(-3000px);
+    border-radius: 0% 50% 100% 0;
+}
+.menu.open{
+    transform: translateY(0px);
+    border-radius: 0% 0% 0% 0%;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 60px;
+}
+.close {
+    width: 1em;
+    height: 1em;
+    background-color: var(--c-primary);
+    cursor: pointer;
+    clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+}
+.sectionsList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+}
+.content{
+    display: flex;
+    padding: 0px 220px;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(100% - 150px);
+}
+.list, list .item{
+    margin: 0;
+    padding: 0;
+}
+.title{
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.list{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.list .item{
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--c-grayLight);
+    position: relative;
+    transition: all .3s ease;
+}
+.list .item:not(.active) {
+    cursor: pointer;
+}
+.list .item:not(.active):hover{
+    color: var(--c-secondary);
+    transition: all .3s ease;
+}
+.list .item.active{
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--c-primary);
+}
+.list .item.active::after, .list .item.active::before{
+    content: '';
+    width: 60px;
+    height: 4px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--c-primary);
+}
+.list .item.active::after{
+    right: -70px;
+}
+.list .item.active::before{
+    left: -70px;
+}
+.activeSectioWrap{
+    width: 60%;
+}
+.activeSection{
+    font-weight: 800;
+    font-size: 224px;
+    color: var(--c-white);
+    text-shadow: 18px 21px 30px rgba(0, 0, 0, 0.1);
+}

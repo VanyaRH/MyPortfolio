@@ -2,7 +2,8 @@ import styles from './projectsList.module.css';
 import {SliderComponent} from "../../../common/slider/slider";
 import project1 from "../../../../assets/images/projects/Macbook Pro.jpg";
 import {Text} from "../../../common/text/text";
-import {ElementRef, useEffect, useMemo, useRef, useState} from "react";
+import {ElementRef, Ref, useEffect, useMemo, useRef, useState} from "react";
+import { useInViewport } from 'react-in-viewport';
 
 export const ProjectsList = () => {
     let zSpacing = -1000,
@@ -12,31 +13,59 @@ export const ProjectsList = () => {
         zVals: number[] = [];
 
     const wrap = useRef(null);
+    const {
+        inViewport,
+    } = useInViewport(
+        wrap,
+    );
 
-    if(wrap?.current){
-        // @ts-ignore
-        let topOffset = wrap.current.scrollTop;
-        console.log(topOffset);
-        // @ts-ignore
-        wrap.current.onscroll = (e: Event) => {
-            e.preventDefault();
-            e.stopPropagation();
-            // @ts-ignore
-            let top =  wrap.current.scrollTop,
-                 delta = lastPos - top;
-            lastPos = top;
-            console.log(frames);
-            frames.forEach(function(n, i) {
-                let topSpasing = 200 * i;
-                zVals.push((i * zSpacing) + zSpacing)
-                zVals[i] += delta * -5.5
-                let frame = frames[i],
-                    transform = `translateZ(${zVals[i]}px)`,
-                    opacity = zVals[i] < Math.abs(zSpacing) / 1.8 ? 1 : 0
-                frame.setAttribute('style', `transform: ${transform}; opacity: ${opacity}; top: ${topSpasing}px`)
-            })
+    const isInViewport = (ref: any) => {
+        const rect = ref.current.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    const setSrollView = (wrap: any) => {
+        if(wrap?.current){
+            if(!isInViewport(wrap)){
+                // @ts-ignore
+                wrap.current.onscroll = () => {};
+                // @ts-ignore
+                wrap.current.classList.add(`scroll-hidden`);
+            }else{
+                // @ts-ignore
+                wrap.current.classList.remove(`scroll-hidden`);
+                // @ts-ignore
+                wrap.current.onscroll = (e: Event) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    // @ts-ignore
+                    let top =  wrap.current.scrollTop,
+                        delta = lastPos - top;
+                    lastPos = top;
+                    console.log(frames);
+                    frames.forEach(function(n, i) {
+                        let topSpasing = 200 * i;
+                        zVals.push((i * zSpacing) + zSpacing)
+                        zVals[i] += delta * -5.5
+                        let frame = frames[i],
+                            transform = `translateZ(${zVals[i]}px)`,
+                            opacity = zVals[i] < Math.abs(zSpacing) / 1.8 ? 1 : 0
+                        frame.setAttribute('style', `transform: ${transform}; opacity: ${opacity}; top: ${topSpasing}px; pointer-events: ${!opacity ? `none` : `auto` };`)
+                    })
+                }
+            }
         }
     }
+
+    window.addEventListener(`scroll`, () => {
+        setSrollView(wrap)
+    })
 
     return (<div ref={wrap} className={styles.projectsListWrap}>
         <div className={styles.projectsList}>
@@ -157,6 +186,11 @@ export const ProjectsList = () => {
                 </div>
             </div>
         </div>
+
+
+
+
+
     </div>)
 }
 

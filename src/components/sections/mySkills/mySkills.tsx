@@ -9,7 +9,7 @@ import wordpressImg from '../../../assets/images/icons/wordpress.png';
 
 export const MySkills = () => {
     return (
-        <section className={`container ${styles.wrap}`}>
+        <section id="skills" className={`container ${styles.wrap}`}>
             <div className={styles.title}>
                 <Text customClass={styles.titleText} text={'My skills and knowledge'} />
             </div>

@@ -15,7 +15,8 @@ export const SliderComponent = (props: any) => {
     };
 
     const styles = {
-        width: '600px'
+        width: '600px',
+        zIndex: 1
     }
 
     return (

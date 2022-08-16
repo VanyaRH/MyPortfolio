@@ -4,7 +4,7 @@ import buttons from '../../../mainStyles/buttons.module.css';
 
 export const AboutTitle = () => {
     return (
-        <section className={`container ${styles.container}`}>
+        <section id="home" className={`container ${styles.container}`}>
             <Text customClass={styles.positionName} text={'Programmer'}/>
             <div className={styles.mainInfo}>
                 <p className={styles.mainTitle}>IVAN ROSOKHA</p>
