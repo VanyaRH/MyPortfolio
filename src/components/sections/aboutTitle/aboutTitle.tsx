@@ -1,10 +1,13 @@
 import styles from './main-section.module.css';
 import {Text} from "../../common/text/text";
 import buttons from '../../../mainStyles/buttons.module.css';
+import {Sections} from "../../../variables/sections";
+import React, {ForwardedRef, Ref} from "react";
 
-export const AboutTitle = () => {
+
+export const AboutTitle = React.forwardRef((props, ref:ForwardedRef<any>) => {
     return (
-        <section id="home" className={`container ${styles.container}`}>
+        <section ref={ref} id="home" data-page={Sections.home} className={`container ${styles.container}`}>
             <Text customClass={styles.positionName} text={'Programmer'}/>
             <div className={styles.mainInfo}>
                 <p className={styles.mainTitle}>IVAN ROSOKHA</p>
@@ -23,4 +26,4 @@ export const AboutTitle = () => {
             </div>
         </section>
     )
-}
+})

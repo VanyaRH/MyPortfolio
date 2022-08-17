@@ -4,10 +4,12 @@ import {ProjectsList} from "../myProjects/projectsList/projectsList";
 import {Socials} from "./socials/socials";
 import buttons from '../../../mainStyles/buttons.module.css'
 import {ContactForm} from "./contactForm/contactForm";
+import React, {ForwardedRef} from "react";
+import {Sections} from "../../../variables/sections";
 
-export const Contacts = () => {
+export const Contacts = React.forwardRef((props, ref:ForwardedRef<any>) => {
     return (
-        <section id="contacts" className={`${styles.wrap}`}>
+        <section ref={ref} data-page={Sections.contacts} id="contacts" className={`${styles.wrap}`}>
             <div className={styles.contactsWrap}>
                 <Text customClass={styles.title} text={'MY CONTACTS'} />
             </div>
@@ -36,4 +38,4 @@ export const Contacts = () => {
             </div>
         </section>
     )
-}
+})

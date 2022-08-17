@@ -6,10 +6,12 @@ import jsImg from '../../../assets/images/icons/js.svg';
 import reactImg from '../../../assets/images/icons/react.png';
 import angularImg from '../../../assets/images/icons/angular.svg';
 import wordpressImg from '../../../assets/images/icons/wordpress.png';
+import React, {ForwardedRef} from "react";
+import {Sections} from "../../../variables/sections";
 
-export const MySkills = () => {
+export const MySkills = React.forwardRef((props, ref:ForwardedRef<any>) => {
     return (
-        <section id="skills" className={`container ${styles.wrap}`}>
+        <section ref={ref} data-page={Sections.skills} id="skills" className={`container ${styles.wrap}`}>
             <div className={styles.title}>
                 <Text customClass={styles.titleText} text={'My skills and knowledge'} />
             </div>
@@ -175,4 +177,4 @@ export const MySkills = () => {
             </div>
         </section>
     )
-}
+})

@@ -10,10 +10,11 @@ import avatar from '../../../assets/images/avatar.jpg';
 import {Card} from "./components/card/card";
 import {ExperienceCard, ExperienceCardTypes} from "./components/experienceCard/experienceCard";
 import {Sections} from "../../../variables/sections";
+import React, {ForwardedRef} from "react";
 
-export const AboutInfo = () => {
+export const AboutInfo = React.forwardRef((props, ref:ForwardedRef<any>) => {
     return (
-        <section id="aboutMe" className={`container ${styles.container}`}>
+        <section ref={ref} data-page={Sections.aboutMe} id="aboutMe" className={`container ${styles.container}`}>
             <div className={styles.aboutSection}>
                 <div className={styles.avatarWrap}>
                     <img src={avatar} alt="Ivan Rosokha"/>
@@ -97,4 +98,4 @@ export const AboutInfo = () => {
             </div>
         </section>
     )
-}
+})
