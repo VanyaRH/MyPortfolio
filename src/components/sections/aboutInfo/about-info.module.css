@@ -132,3 +132,13 @@
     justify-content: center;
     gap: 40px;
 }
+
+@media (max-width: 1200px) {
+    .avatarWrap{
+        position: absolute;
+        top: -125px;
+        left: -11px;
+        width: 350px;
+        height: 200px;
+    }
+}

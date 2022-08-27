@@ -15,7 +15,7 @@
     margin-top: 50px;
     transform-style: preserve-3d;
     height: 1620px;
-    padding: var(--padding);
+    padding: 0 260px;
 }
 .projectItem{
     padding: 30px 20px;
@@ -92,4 +92,34 @@
 .heightItem{
     height: 1620px;
     width: 100%;
+}
+
+@media (max-width: 1440px) {
+    .projectsList{
+        padding: 0 40px;
+    }
+    .projectItem .info .projectTitle{
+        font-size: 26px;
+    }
+    .projectItem .info .projectDescription{
+        font-size: 14px;
+    }
+    .projectsList{
+        max-width: calc(100% - 205px);
+    }
+}
+
+@media (max-width: 1200px) {
+    .projectsList{
+        padding: 0 40px;
+    }
+    .projectItem .info .projectTitle{
+        font-size: 26px;
+    }
+    .projectItem .info .projectDescription{
+        font-size: 14px;
+    }
+    .projectsList{
+        max-width: calc(100% - 205px);
+    }
 }

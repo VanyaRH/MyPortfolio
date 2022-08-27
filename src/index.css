@@ -108,7 +108,10 @@ body{
 .scroll-hidden{
     overflow-y: hidden !important;
 }
-
+.slick-slide img{
+    width: 100%;
+    object-fit: contain;
+}
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
     width: 5px;
@@ -190,4 +193,16 @@ body{
 }
 .hamburger-react{
     z-index: 2;
+}
+
+@media(max-width: 1440px){
+    .container{
+        padding: 0 160px;
+    }
+}
+
+@media(max-width: 1200px){
+    .container{
+        padding: 0 60px;
+    }
 }

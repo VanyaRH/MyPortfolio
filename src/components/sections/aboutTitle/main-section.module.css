@@ -113,3 +113,22 @@
         background: #00BCD4;
     }
 }
+@media (max-width: 1440px){
+    .container{
+        padding: 0 160px;
+    }
+    .container .positionName{
+        font-size: 200px;
+    }
+}
+@media (max-width: 1200px){
+    .container .positionName{
+        font-size: 137px;
+    }
+    .container{
+        padding: 0 60px;
+    }
+    .mainInfo{
+        margin-top: 130px;
+    }
+}

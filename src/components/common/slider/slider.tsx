@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-
-interface ICustomDot{
-    index: number
-}
+import {screenWidth} from "../../../helpers/misc";
 
 export const SliderComponent = (props: any) => {
     const settings = {
@@ -17,6 +14,10 @@ export const SliderComponent = (props: any) => {
     const styles = {
         width: '600px',
         zIndex: 1
+    }
+
+    if(screenWidth() <= 1200){
+        styles.width = '400px';
     }
 
     return (

@@ -1,13 +1,14 @@
-import {useEffect, useState} from 'react';
+import {useContext, useEffect, useState} from 'react';
 import { MyMenu } from '../menu/menu';
 import { MyLogo } from '../myLogo/logo';
 import styles from './header.module.css';
+import {GlobalContext} from "../../App";
 
 export const Header = () => {
 
     const [sticky, setSticky] = useState("");
     const [hidden, setHidden] = useState("");
-
+    const context = useContext(GlobalContext);
     // on render, set listener
     useEffect(() => {
         window.addEventListener("mousewheel", isSticky);
@@ -17,6 +18,8 @@ export const Header = () => {
     }, []);
 
     const updateMenu = (event: any) => {
+        if(context.openedMenu) return;
+
         const scrollTop = window.scrollY;
         let stickyClass = "", hiddenClass = '';
 
@@ -33,7 +36,7 @@ export const Header = () => {
     }
 
     const isSticky = (event: any) => {
-        setTimeout(() => { updateMenu(event); }, 100)
+        setTimeout(() => { updateMenu(event); }, 200)
     };
 
     return (

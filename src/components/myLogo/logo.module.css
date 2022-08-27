@@ -13,14 +13,20 @@
     font-family: var(--ff-primary);
     font-style: normal;
     font-weight: 700;
-    color: var('--c-primary');
+    color: var(--c-primary);
     font-size: 24px;
 }
 .subTitle{
     font-family: var(--ff-secondary);
     font-style: normal;
     font-weight: 400;
-    color: var('--c-primary');
+    color: var(--c-primary);
     font-size: 16px;
     margin-top: 5px;
+}
+
+@media(max-width: 1200px){
+    .subTitle{
+        font-size: 12px;
+    }
 }

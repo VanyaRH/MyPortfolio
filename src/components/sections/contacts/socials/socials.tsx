@@ -40,7 +40,7 @@ c9.24,0,15.36-6.5,15.36-15.64c0-1.17-0.11-2.29-0.31-3.36C31.05,21,16,21,16,21z"/
             </svg>
 
             <div className="wrapper">
-                <div className="connect">
+                <div className={styles.connect}>
 
                     <a href="" className="share twitter">
                         <svg role="presentation" className="svg--icon">

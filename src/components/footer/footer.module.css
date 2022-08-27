@@ -18,3 +18,9 @@
 .downloadBtn{
     margin-left: 50px;
 }
+
+@media (max-width: 1200px) {
+    .info{
+        font-size: 12px;
+    }
+}

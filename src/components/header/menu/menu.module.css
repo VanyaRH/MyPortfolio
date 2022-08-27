@@ -97,3 +97,12 @@
     color: var(--c-white);
     text-shadow: 18px 21px 30px rgba(0, 0, 0, 0.1);
 }
+
+@media (max-width: 1200px){
+    .content{
+        padding: 0px 90px;
+    }
+    .activeSection{
+        font-size: 144px;
+    }
+}

@@ -17,7 +17,7 @@ export const MySkills = React.forwardRef((props, ref:ForwardedRef<any>) => {
             </div>
             <div className={styles.mySkills}>
                 <div className={`${styles.bar} ${styles.leftBar}`}>
-                    <div className={`${styles.skillItem} ${styles.right}`}>
+                    <div className={`${styles.skillItem} ${styles.left}`}>
                         <div className={styles.skillInfo}>
                             <p className={styles.value}>
                                 90%

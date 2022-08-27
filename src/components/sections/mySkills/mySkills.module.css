@@ -157,3 +157,27 @@
     color: var(--c-black);
     margin-top: 20px;
 }
+
+@media (max-width: 1200px){
+    .skillInfo .value{
+        font-size: 38px;
+    }
+    .skillImage, .skillImage img{
+        width: 100px;
+    }
+    .skillInfo span{
+        font-size: 12px;
+    }
+    .skillDescription .skillName{
+        font-size: 20px;
+    }
+    .skillDescription .skillUsingTime{
+        font-size: 12px;
+    }
+    .skillDescription .skillTitle{
+        font-size: 16px;
+    }
+    .separator{
+        height: 83px;
+    }
+}

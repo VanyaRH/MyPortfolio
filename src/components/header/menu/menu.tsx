@@ -2,9 +2,9 @@ import styles from './menu.module.css';
 import {MyLogo} from "../../myLogo/logo";
 import {Text} from "../../common/text/text";
 import {Sections} from "../../../variables/sections";
-import {useContext, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import ScrollIntoView from 'react-scroll-into-view'
-import { PagesContext } from '../../../App';
+import { GlobalContext } from '../../../App';
 
 interface IMenu{
     open: boolean;
@@ -13,21 +13,27 @@ interface IMenu{
 }
 
 export const Menu = (props: IMenu) => {
-    const page = useContext(PagesContext);
-    console.log(`obs`, page);
-    const [activeSection, setActive] = useState(page);
-    console.log(`obs activeSection`, activeSection);
+    const context = useContext(GlobalContext);
+
+    const [activeSection, setActive] = useState(context.activePage);
+
     const handleActive = (name: Sections) => {
         if(activeSection === name) return;
         setActive(name);
         props.onClick(name);
     }
 
-    if(props.open){
-        if(activeSection !== page){
-            setActive(page);
+    useEffect(() => {
+        if(props.open){
+            if(activeSection !== context.activePage){
+                setActive(context.activePage);
+            }
         }
-    }
+    }, [activeSection])
+
+    useEffect(() => {
+        context.setIsOpenMenu(props.open);
+    }, [props.open])
 
     return (
         <div className={`${styles.menu} ${props.open && styles.open}`} >
