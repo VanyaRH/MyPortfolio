@@ -24,3 +24,13 @@
         font-size: 12px;
     }
 }
+
+@media (max-width: 768px) {
+    .right{
+        flex-direction: column-reverse;
+        align-items: flex-end;
+    }
+    .footer{
+        padding: 40px;
+    }
+}

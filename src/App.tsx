@@ -98,7 +98,7 @@ function App() {
                     <MyProjects separator={true} ref={newRef()}/>
                     <Contacts ref={newRef()} />
                     <Footer />
-                    {/*<ParticlesComponent />*/}
+                    <ParticlesComponent />
                 </div>
             </div>
         </GlobalContext.Provider>

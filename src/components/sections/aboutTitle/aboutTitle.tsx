@@ -3,6 +3,7 @@ import {Text} from "../../common/text/text";
 import buttons from '../../../mainStyles/buttons.module.css';
 import {Sections} from "../../../variables/sections";
 import React, {ForwardedRef, Ref} from "react";
+import {PrintText} from "../../common/text/printText";
 
 
 export const AboutTitle = React.forwardRef((props, ref:ForwardedRef<any>) => {
@@ -11,7 +12,7 @@ export const AboutTitle = React.forwardRef((props, ref:ForwardedRef<any>) => {
             <Text customClass={styles.positionName} text={'Programmer'}/>
             <div className={styles.mainInfo}>
                 <p className={styles.mainTitle}>IVAN ROSOKHA</p>
-                <h3 className={`${styles.positionSubName} ${styles.positionSubNameMargin}`}><Text customClass={buttons.positionSubName} text={'Front-end Developer & Mentor'}/></h3>
+                <h3 className={`${styles.positionSubName} ${styles.positionSubNameMargin}`}><PrintText delay={100} texts={['Front-end Developer and Mentor']}/></h3>
                 <div className={`${styles.descriptionWrap} ${styles.description}`}>
                     <Text customClass={buttons.link} text={`In pretium luctus nunc, sed vehicula nisi vulputate condimentum.
                     Maecenas molestie erat ut aliquet tincidunt. Nullam mauris lorem, tristique non dapibus vel, congue ut est.

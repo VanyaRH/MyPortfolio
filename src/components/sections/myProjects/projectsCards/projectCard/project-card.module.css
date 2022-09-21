@@ -1,0 +1,65 @@
+.card{
+    opacity: 1;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    -o-transition-duration: .4s;
+    transition-duration: .4s;
+    -webkit-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    transition-timing-function: ease;
+    transition-property: opacity,transform,-webkit-transform;
+    width: 345px;
+    height: 345px;
+    cursor: pointer;
+    margin-bottom: 60px;
+}
+.card:hover .rnPortfolio{
+    background: #f1f1f1;
+}
+
+.card:hover .thumbnail img{
+    transform: scale(1.07);
+    transition: all .7s ease;
+}
+.rnPortfolio{
+    text-align: left;
+    padding: 30px;
+    position: relative;
+    border-radius: 20px;
+    background: var(--c-white);
+    box-shadow: 0px 4px 30px rgb(0 0 0 / 20%);
+    z-index: 1;
+    height: 100%;
+    transition: 0.5s all ease-in-out;
+    display: inline-block;
+}
+.thumbnail img{
+    width: 100%;
+    object-fit: cover;
+    height: 180px;
+    transition: all .7s ease;
+}
+.title{
+    margin-top: 20px;
+}
+.title a{
+    font-size: 30px;
+    color: var(--c-primary);
+    text-decoration: none;
+}
+.category{
+    margin-top: 7px;
+}
+.category .categoryList a{
+    color: var(--c-gray);
+    text-decoration: none;
+}
+
+@media(max-width: 1112px){
+    .card{
+        margin: 0 auto;
+        margin-bottom: 60px;
+        height: auto;
+    }
+}

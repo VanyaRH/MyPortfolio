@@ -3,7 +3,6 @@
     overflow-x: hidden;
     overflow-y: auto;
     transform-style: preserve-3d;
-    height: 800px;
 }
 .projectsListWrap {
     scrollbar-width: none; /* Firefox */
@@ -14,7 +13,6 @@
 .projectsList{
     margin-top: 50px;
     transform-style: preserve-3d;
-    height: 1620px;
     padding: 0 260px;
 }
 .projectItem{
@@ -22,16 +20,14 @@
     background: var(--c-white);
     box-shadow: 0px 18px 80px rgba(0, 0, 0, 0.1);
     border-radius: 48px;
-    min-height: 600px;
+    min-height: 500px;
     display: flex;
     align-items: center;
-    width: 100%;
-    position: absolute;
     justify-content: center;
     transition: .75s cubic-bezier(.075, .5, 0, 1), opacity .75s ease;
     will-change: transform;
     transform-style: preserve-3d;
-    max-width: 1364px;
+    max-width: 100%;
 }
 .projectItem .info{
     display: flex;
@@ -121,5 +117,20 @@
     }
     .projectsList{
         max-width: calc(100% - 205px);
+    }
+}
+@media(max-width: 768px){
+    .projectItem{
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    .projectItem .info{
+        margin-top: 30px;
+    }
+    .projectItem .info .projectTitle{
+        font-size: 20px;
+    }
+    .myInfo{
+        margin-top: 30px;
     }
 }

@@ -132,3 +132,38 @@
         margin-top: 130px;
     }
 }
+@media(max-width: 834px){
+    .container .positionName{
+        font-size: 120px;
+    }
+    .mainInfo .positionSubName{
+        font-size: 38px;
+    }
+}
+
+@media(max-width: 768px){
+    .container{
+        padding: 0 20px;
+    }
+    .container .positionName{
+        font-size: 110px;
+    }
+}
+
+@media(max-width: 667px){
+    .container .positionName{
+        font-size: 100px;
+    }
+    .mainInfo .positionSubName{
+        font-size: 34px;
+    }
+}
+
+@media(max-width: 568px){
+    .container .positionName{
+        font-size: 85px;
+    }
+    .mainInfo .positionSubName{
+        font-size: 32px;
+    }
+}

@@ -28,7 +28,13 @@ interface iFullScreenDialog{
     onSetOpen: (isOpen: boolean) => void;
 }
 
-export default function FullScreenDialog({ isOpen, children, onSetOpen }: iFullScreenDialog) {
+interface iProjectDialog{
+    isOpen: boolean;
+    children: any;
+    onSetOpen: (isOpen: boolean) => void;
+}
+
+export const FullScreenDialog = ({ isOpen, children, onSetOpen }: iFullScreenDialog) => {
     const [open, setOpen] = useState(isOpen);
 
     const handleClose = () => {
@@ -44,7 +50,7 @@ export default function FullScreenDialog({ isOpen, children, onSetOpen }: iFullS
         <div>
 
             <Dialog
-                fullScreen
+                fullScreen={true}
                 open={open}
                 onClose={handleClose}
                 TransitionComponent={Transition}
@@ -58,7 +64,48 @@ export default function FullScreenDialog({ isOpen, children, onSetOpen }: iFullS
                             color="inherit"
                             onClick={handleClose}
                             aria-label="close"
-                        >Close
+                        >&#10005;
+                        </IconButton>
+                    </Toolbar>
+                </AppBar>
+                {children}
+            </Dialog>
+        </div>
+    );
+}
+
+export const ProjectDialog = ({ isOpen, children, onSetOpen }: iProjectDialog) => {
+    const [open, setOpen] = useState(isOpen);
+
+    const handleClose = () => {
+        onSetOpen(false);
+        setOpen(false);
+    };
+
+    useEffect(() => {
+        setOpen(isOpen);
+    }, [isOpen])
+
+    return (
+        <div>
+
+            <Dialog
+                fullScreen={false}
+                maxWidth={false}
+                open={open}
+                onClose={handleClose}
+                TransitionComponent={Transition}
+            >
+                <AppBar sx={{ position: 'relative', background: '#fff', boxShadow: 'none', color: '#000' }}>
+                    <Toolbar>
+                        <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div">
+                        </Typography>
+                        <IconButton
+                            edge="start"
+                            color="inherit"
+                            onClick={handleClose}
+                            aria-label="close"
+                        >&#10005;
                         </IconButton>
                     </Toolbar>
                 </AppBar>

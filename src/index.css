@@ -4,6 +4,7 @@
     --c-black: #000000;
     --c-gray: #A3A3A3;
     --c-grayLight: #E5E5E5;
+    --c-grayDark: #cacaca;
     --c-secondary: #A3A3A3;
     --c-red: red;
     --c-green: #19be19;
@@ -195,14 +196,26 @@ body{
     z-index: 2;
 }
 
+/*.slick-slide div:nth-child(1) {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}*/
+
 @media(max-width: 1440px){
     .container{
-        padding: 0 160px;
+        padding: 0 120px;
     }
 }
 
 @media(max-width: 1200px){
     .container{
         padding: 0 60px;
+    }
+}
+
+@media(max-width: 1200px){
+    .container{
+        padding: 0 20px;
     }
 }

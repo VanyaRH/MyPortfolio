@@ -67,3 +67,12 @@
 .sent{
     border-bottom: 2px solid var(--c-green);
 }
+
+@media(max-width: 667px){
+    .field{
+        width: 210px;
+    }
+    .field:focus{
+        width: 240px;
+    }
+}

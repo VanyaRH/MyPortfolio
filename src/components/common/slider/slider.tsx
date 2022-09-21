@@ -9,6 +9,8 @@ export const SliderComponent = (props: any) => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
+        arrows: false,
+        centerPadding: '20px'
     };
 
     const styles = {
@@ -23,6 +25,31 @@ export const SliderComponent = (props: any) => {
     return (
         <div style={styles} >
             <Slider {...settings}>
+                {props.children.map((child: any) => { return child })}
+            </Slider>
+        </div>
+    )
+}
+
+export const SliderTabletComponent = (props: any) => {
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        centerMode: true,
+    };
+
+    const styles = {
+        width: '600px',
+        zIndex: 1
+    }
+
+    return (
+        <div style={styles} >
+            <Slider className="tablet-item-wrap" {...settings}>
                 {props.children.map((child: any) => { return child })}
             </Slider>
         </div>

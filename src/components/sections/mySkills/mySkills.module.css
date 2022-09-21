@@ -181,3 +181,30 @@
         height: 83px;
     }
 }
+
+@media (max-width: 1112px){
+    .roundSeparator:not(:first-child){
+        margin: 186px 0;
+    }
+}
+
+@media (max-width: 834px){
+    .roundSeparator:not(:first-child){
+        margin: 218px 0;
+    }
+}
+
+@media (max-width: 768px){
+    .centerBar{
+        width: 70px;
+    }
+    .skillImage{
+        margin: 0 40px;
+    }
+    .skillDescription .description{
+        font-size: 14px;
+    }
+    .roundSeparator:not(:first-child){
+        margin: 208px 0;
+    }
+}

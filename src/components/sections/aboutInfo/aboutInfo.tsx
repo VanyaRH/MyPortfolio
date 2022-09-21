@@ -54,7 +54,7 @@ export const AboutInfo = React.forwardRef((props, ref:ForwardedRef<any>) => {
 
                                 <li>
                                     <span className={styles.title}>Address</span>
-                                    <span className={styles.value}>88 Some Street, Some Town</span>
+                                    <span className={styles.value}>Uzhhorod</span>
                                 </li>
 
                                 <li>
