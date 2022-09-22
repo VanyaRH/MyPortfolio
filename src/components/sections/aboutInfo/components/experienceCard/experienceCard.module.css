@@ -52,3 +52,28 @@
     margin-left: 5px;
     margin-bottom: 2px;
 }
+@media(max-width: 568px){
+    .card{
+        width: 300px;
+        max-width: 300px;
+    }
+}
+
+@media(max-width: 375px){
+    .card{
+        width: 280px;
+        max-width: 280px;
+    }
+}
+@media(max-width: 375px){
+    .card{
+        width: 235px;
+        max-width: 235px;
+    }
+}
+@media(max-width: 320px){
+    .card{
+        width: 220px;
+        max-width: 220px;
+    }
+}

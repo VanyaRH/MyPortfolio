@@ -20,3 +20,15 @@
     transition: .5s all ease;
     transform: translateY(-200px);
 }
+
+@media (max-width: 414px) {
+    .header {
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 320px) {
+    .header {
+        padding: 10px 15px;
+    }
+}

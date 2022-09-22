@@ -10,6 +10,7 @@ import {Contacts} from "./components/sections/contacts/contacts";
 import {Footer} from "./components/footer/footer";
 import {Sections} from "./variables/sections";
 import {ParticlesComponent} from "./components/Particles/particles";
+import {ReactComponent} from "*.svg";
 
 interface IContextState{
     activePage: Sections,
@@ -106,3 +107,4 @@ function App() {
 }
 
 export default App;
+

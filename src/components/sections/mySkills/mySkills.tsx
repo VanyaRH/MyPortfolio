@@ -8,6 +8,9 @@ import angularImg from '../../../assets/images/icons/angular.svg';
 import wordpressImg from '../../../assets/images/icons/wordpress.png';
 import React, {ForwardedRef} from "react";
 import {Sections} from "../../../variables/sections";
+import {SliderTabletComponent} from "../../common/slider/slider";
+import {ProjectCard} from "../myProjects/projectsCards/projectCard/projectCard";
+import MediaQuery from "react-responsive";
 
 export const MySkills = React.forwardRef((props, ref:ForwardedRef<any>) => {
     return (
@@ -17,6 +20,9 @@ export const MySkills = React.forwardRef((props, ref:ForwardedRef<any>) => {
             </div>
             <div className={styles.mySkills}>
                 <div className={`${styles.bar} ${styles.leftBar}`}>
+                    <MediaQuery maxWidth={375}>
+                        <div className={styles.separator}></div>
+                    </MediaQuery>
                     <div className={`${styles.skillItem} ${styles.left}`}>
                         <div className={styles.skillInfo}>
                             <p className={styles.value}>

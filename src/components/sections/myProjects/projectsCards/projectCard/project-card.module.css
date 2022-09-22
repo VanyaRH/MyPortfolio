@@ -37,7 +37,6 @@
 .thumbnail img{
     width: 100%;
     object-fit: cover;
-    height: 180px;
     transition: all .7s ease;
 }
 .title{
@@ -61,5 +60,19 @@
         margin: 0 auto;
         margin-bottom: 60px;
         height: auto;
+    }
+}
+@media(max-width: 375px){
+    .card{
+        width: 320px;
+    }
+}
+
+@media(max-width: 320px){
+    .card{
+        width: 275px;
+    }
+    .title a{
+        font-size: 25px;
     }
 }

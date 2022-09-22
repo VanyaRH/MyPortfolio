@@ -31,3 +31,44 @@
         font-size: 12px;
     }
 }
+@media(max-width: 568px){
+    .isFooter .name{
+        font-size: 20px;
+    }
+    .isFooter .subTitle{
+        font-size: 10px;
+    }
+}
+
+@media(max-width: 414px){
+    .name{
+        font-size: 18px;
+    }
+    .subTitle{
+        font-size: 9px;
+    }
+
+    .isFooter .name{
+        font-size: 24px;
+    }
+    .isFooter .subTitle{
+        font-size: 12px;
+    }
+    .isFooter{
+        display: none;
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+@media(max-width: 320px) {
+    .mainText .name {
+        font-size: 14px;
+    }
+
+    .subTitle {
+        font-size: 7px;
+    }
+    .main img{
+        width: 35px;
+    }
+}

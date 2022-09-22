@@ -32,7 +32,7 @@ export const AboutInfo = React.forwardRef((props, ref:ForwardedRef<any>) => {
                 </div>
             </div>
             <div className={styles.sectionContent}>
-                <div className="flexRow">
+                <div className={`flexRow ${styles.contentInfo}`}>
                     <div className={styles.mainDescription}>
                         <p>Proin volutpat mauris ac pellentesque pharetra. Suspendisse congue elit vel odio suscipit,
                             sit amet tempor nisl imperdiet. Quisque ex justo, faucibus ut mi in, condimentum finibus

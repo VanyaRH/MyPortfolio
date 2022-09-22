@@ -160,3 +160,32 @@
         padding-top: 130px;
     }
 }
+
+@media(max-width: 568px){
+    .myExperienceInfoWrap{
+        flex-direction: column;
+    }
+    .innerList{
+        gap: 20px;
+        padding: 20px;
+    }
+}
+@media(max-width: 414px){
+    .innerList{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .contentInfo{
+        flex-direction: column;
+    }
+    .contentInfo div{
+        width: 100%;
+    }
+    .mainDescription{
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 320px) {
+    .myCVWrap{
+        flex-direction: column-reverse;
+    }
+}

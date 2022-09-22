@@ -47,8 +47,27 @@ export const SliderTabletComponent = (props: any) => {
         zIndex: 1
     }
 
+    if(screenWidth() <= 580){
+        styles.width = '537px';
+    }
+
+    if(screenWidth() <= 496){
+        styles.width = '380px';
+        settings.centerMode = false;
+    }
+
+    if(screenWidth() <= 399){
+        styles.width = '340px';
+        settings.centerMode = false;
+    }
+
+    if(screenWidth() <= 352){
+        styles.width = '300px';
+        settings.centerMode = false;
+    }
+
     return (
-        <div style={styles} >
+        <div style={styles}>
             <Slider className="tablet-item-wrap" {...settings}>
                 {props.children.map((child: any) => { return child })}
             </Slider>

@@ -164,6 +164,63 @@
         font-size: 85px;
     }
     .mainInfo .positionSubName{
-        font-size: 32px;
+        font-size: 30px;
+    }
+    .description{
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 414px){
+    .container .positionName{
+        font-size: 55px;
+    }
+    .mainInfo .positionSubName{
+        font-size: 20px;
+    }
+    .mainInfo .mainTitle{
+        font-size: 12px;
+    }
+    .mainInfo{
+        margin-top: 48px;
+    }
+    .description{
+        font-size: 12px;
+        margin-top: 10px;
+    }
+}
+@media(max-width: 414px){
+    .container .positionName{
+        font-size: 50px;
+    }
+    .mainInfo .positionSubName{
+        font-size: 18px;
+    }
+    .mainInfo .mainTitle{
+        font-size: 11px;
+    }
+    .description{
+        font-size: 11px;
+    }
+}
+
+@media(max-width: 320px){
+    .container .positionName{
+        font-size: 40px;
+    }
+    .mainInfo .positionSubName{
+        font-size: 16px;
+    }
+    .mainInfo .mainTitle{
+        font-size: 10px;
+    }
+    .description{
+        font-size: 10px;
+    }
+    .animateLink{
+        padding: 17px 20px !important;
+    }
+    .container{
+        padding: 0 10px;
     }
 }

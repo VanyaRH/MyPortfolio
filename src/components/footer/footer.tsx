@@ -8,7 +8,7 @@ export const Footer = () => {
     return (
         <footer className={styles.footer}>
             <div className={styles.left}>
-                <MyLogo />
+                <MyLogo isFooter={true} />
                 <div className={styles.info}>
                     © 2022-2022, Impulse Design. All Rights Reserved.
                 </div>

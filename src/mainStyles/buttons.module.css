@@ -54,3 +54,9 @@
     padding-right: 0;
     padding-bottom: 7px;
 }
+
+@media(max-width: 414px){
+    .link{
+        font-size: 14px;
+    }
+}

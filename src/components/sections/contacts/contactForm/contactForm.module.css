@@ -76,3 +76,14 @@
         width: 240px;
     }
 }
+@media(max-width: 414px){
+    .field{
+        width: 90%;
+    }
+    .field:focus{
+        width: 100%;
+    }
+    .form{
+        width: 100%;
+    }
+}

@@ -34,3 +34,32 @@
         padding: 40px;
     }
 }
+
+@media (max-width: 568px) {
+    .downloadBtn{
+        margin-left: auto;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    .info{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 414px) {
+    .downloadBtn{
+        margin-left: 0;
+        padding: 17px 40px;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .info{
+        font-size: 14px;
+        margin-top: 12px;
+    }
+    .footer{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+}

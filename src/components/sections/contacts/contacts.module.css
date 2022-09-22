@@ -84,3 +84,14 @@
         gap: 0;
     }
 }
+@media(max-width: 414px){
+    .contactsInfoWrap{
+        flex-direction: column;
+    }
+    .contactsInfo, .contactsForm{
+        width: 100%;
+    }
+    .contactsForm{
+        width: 100%;
+    }
+}
