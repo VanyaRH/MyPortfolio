@@ -22,6 +22,18 @@ export const SliderComponent = (props: any) => {
         styles.width = '400px';
     }
 
+    if(screenWidth() <= 496){
+        styles.width = '380px';
+    }
+
+    if(screenWidth() <= 399){
+        styles.width = '340px';
+    }
+
+    if(screenWidth() <= 352){
+        styles.width = '300px';
+    }
+
     return (
         <div style={styles} >
             <Slider {...settings}>

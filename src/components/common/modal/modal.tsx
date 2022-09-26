@@ -12,6 +12,7 @@ import Typography from '@mui/material/Typography';
 import Slide from '@mui/material/Slide';
 import { TransitionProps } from '@mui/material/transitions';
 import {useEffect, useState} from "react";
+import {globalOverflow, screenWidth} from "../../../helpers/misc";
 
 const Transition = React.forwardRef(function Transition(
     props: TransitionProps & {
@@ -83,14 +84,19 @@ export const ProjectDialog = ({ isOpen, children, onSetOpen }: iProjectDialog) =
     };
 
     useEffect(() => {
+        globalOverflow(isOpen);
         setOpen(isOpen);
     }, [isOpen])
+
+    const fullScreen = () => {
+        return screenWidth() <= 496;
+    }
 
     return (
         <div>
 
             <Dialog
-                fullScreen={false}
+                fullScreen={fullScreen()}
                 maxWidth={false}
                 open={open}
                 onClose={handleClose}
