@@ -1,6 +1,6 @@
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim"; // loads tsparticles-slim
-import { useCallback, useMemo } from "react";
+import React, { useCallback, useMemo } from "react";
 import { Engine } from "tsparticles-engine/types/engine";
 import {IParticlesProps} from "react-tsparticles/types/IParticlesProps";
 import { loadFull } from "tsparticles";
@@ -62,3 +62,5 @@ export  const ParticlesComponent = (props: IParticlesProps) => {
         />
     );
 };
+
+export const MemoizedParticlesComponent = React.memo(ParticlesComponent);

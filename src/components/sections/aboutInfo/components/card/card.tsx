@@ -2,6 +2,7 @@ import styles from './card.module.css';
 import pcGif from "../../../../../assets/images/icons/pc.gif";
 import {Text} from "../../../../common/text/text";
 import {useState} from "react";
+import {Slide} from "react-awesome-reveal";
 
 interface ICard{
     icon: any;
@@ -13,6 +14,7 @@ export const Card = (props: ICard) => {
     const [isShown, setIsShown] = useState(false);
 
     return (
+        <Slide triggerOnce={true} className={styles.innerListBlock} direction="left" duration={1000}>
         <div className={styles.innerListBlock}
              onMouseEnter={() => setIsShown(true)}
              onMouseLeave={() => setIsShown(false)}
@@ -24,6 +26,6 @@ export const Card = (props: ICard) => {
                 <h4><Text customClass={styles.aboutTitle} text={props.title}/></h4>
                 <p className={styles.descriptionWrap}><Text customClass={styles.aboutTitle} text={props.description}/></p>
             </div>
-        </div>
+        </div></Slide>
     )
 }

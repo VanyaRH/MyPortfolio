@@ -1,30 +1,29 @@
 import styles from './contacts.module.css';
-import {Text} from "../../common/text/text";
-import {ProjectsList} from "../myProjects/projectsList/projectsList";
+import {Animations, Text} from "../../common/text/text";
 import {Socials} from "./socials/socials";
-import buttons from '../../../mainStyles/buttons.module.css'
 import {ContactForm} from "./contactForm/contactForm";
 import React, {ForwardedRef} from "react";
 import {Sections} from "../../../variables/sections";
+import {Slide} from "react-awesome-reveal";
 
 export const Contacts = React.forwardRef((props, ref:ForwardedRef<any>) => {
     return (
         <section ref={ref} data-page={Sections.contacts} id="contacts" className={`${styles.wrap}`}>
             <div className={styles.contactsWrap}>
-                <Text customClass={styles.title} text={'MY CONTACTS'} />
+                <Text animation={Animations.SlideTop} customClass={styles.title} text={'MY CONTACTS'} />
             </div>
             <div className={`container ${styles.contactsInfoWrap}`}>
                 <div className={styles.contactsInfo}>
-                    <Text customClass={styles.title} text={'Contact information —'} />
-                    <Text customClass={styles.subTitle} text={'Feel free to reach out to me any time. I prefer to talk over email, especially since we may be a few time zones away.\n'} />
+                    <Text animation={Animations.SlideLeft} customClass={styles.title} text={'Contact information —'} />
+                    <Text animation={Animations.SlideLeft} customClass={styles.subTitle} text={'Feel free to reach out to me any time. I prefer to talk over email, especially since we may be a few time zones away.\n'} />
                     <div className={styles.contactsList}>
                         <div className={styles.item}>
                             <Text customClass={styles.name} text={'E-mail:'} />
-                            <Text customClass={styles.value} text={'wanja68@gmail.com'} />
+                            <Text customClass={styles.value} text={'rosokha.dev@gmail.com'} />
                         </div>
                         <div className={styles.item}>
-                            <Text customClass={styles.name} text={'Phone:'} />
-                            <Text customClass={styles.value} text={'+380-517-512-348'} />
+                            <Text customClass={styles.name} text={'Telegram:'} />
+                            <Text customClass={styles.value} text={'@vanyarosokha'} />
                         </div>
                     </div>
                     <div className={styles.socials}>
@@ -32,9 +31,9 @@ export const Contacts = React.forwardRef((props, ref:ForwardedRef<any>) => {
                         <Socials/>
                     </div>
                 </div>
-                <div className={styles.contactsForm}>
+                <Slide className={styles.contactsForm} triggerOnce={true} direction="right" cascade={true}>
                     <ContactForm />
-                </div>
+                </Slide>
             </div>
         </section>
     )

@@ -1,3 +1,6 @@
+.wrap{
+    overflow-x: hidden;
+}
 .contactsWrap{
     margin-top: 150px;
 }

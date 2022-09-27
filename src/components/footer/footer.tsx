@@ -3,6 +3,7 @@ import {MyLogo} from "../myLogo/logo";
 import {Socials} from "../sections/contacts/socials/socials";
 import buttons from "../../mainStyles/buttons.module.css";
 import {Text} from "../common/text/text";
+import {showCV} from "../../helpers/showCV";
 
 export const Footer = () => {
     return (
@@ -15,7 +16,7 @@ export const Footer = () => {
             </div>
             <div className={styles.right}>
                 <Socials />
-                <button className={`${buttons.btn} ${buttons.download} ${buttons.downloadCV} ${buttons.black} ${styles.downloadBtn}`}><Text customClass={buttons.link} text={'Download CV'}/></button>
+                <button className={`${buttons.btn} ${buttons.download} ${buttons.downloadCV} ${buttons.black} ${styles.downloadBtn}`} onClick={showCV}><Text customClass={buttons.link} text={'Open CV'}/></button>
             </div>
         </footer>
     )

@@ -17,7 +17,9 @@
 .card:hover .rnPortfolio{
     background: #f1f1f1;
 }
-
+.card .thumbnail{
+    min-height: 182px;
+}
 .card:hover .thumbnail img{
     transform: scale(1.07);
     transition: all .7s ease;

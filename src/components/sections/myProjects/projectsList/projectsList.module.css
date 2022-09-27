@@ -90,6 +90,17 @@
     width: 100%;
 }
 
+.previewWrap{
+    margin-top: 20px;
+}
+
+.previewWrap .previewText{
+    font-weight: bold;
+}
+.previewWrap .link{
+    color: var(--c-secondary);
+    margin-left: 5px;
+}
 @media (max-width: 1440px) {
     .projectsList{
         padding: 0 40px;

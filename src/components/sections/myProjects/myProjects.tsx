@@ -1,8 +1,5 @@
 import styles from './myProjects.module.css';
-import {Text} from "../../common/text/text";
-import project1 from '../../../assets/images/projects/Macbook Pro.jpg';
-import {SliderComponent} from "../../common/slider/slider";
-import {ProjectsList} from "./projectsList/projectsList";
+import {Animations, Text} from "../../common/text/text";
 import React, {ForwardedRef} from "react";
 import {Sections} from "../../../variables/sections";
 import {ProjectCards} from "./projectsCards/projectCards";
@@ -15,7 +12,7 @@ export const MyProjects = React.forwardRef((props: IMyProjects, ref:ForwardedRef
     return (
         <section ref={ref} data-page={Sections.projects} id="projects" className={`${styles.wrap}`}>
             {props?.separator && <div className={styles.separatorWrap}>
-                <Text customClass={styles.separator} text={'Let’s work together'} />
+                <Text animation={Animations.SlideTop} customClass={styles.separator} text={'Let’s work together'} />
             </div>}
 
             <div className={styles.projectsWrap}>

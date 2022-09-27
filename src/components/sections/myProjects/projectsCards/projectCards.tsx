@@ -13,20 +13,22 @@ export const ProjectCards = () => {
             <MediaQuery maxWidth={1224}>
                 <SliderTabletComponent>
                     <ProjectCard id={1}/>
-                    <ProjectCard id={1}/>
-                    <ProjectCard id={1}/>
-                    <ProjectCard id={1}/>
-                    <ProjectCard id={1}/>
-                    <ProjectCard id={1}/>
+                    <ProjectCard id={2}/>
+                    <ProjectCard id={3}/>
+                    <ProjectCard id={4}/>
+                    <ProjectCard id={5}/>
+                    <ProjectCard id={6}/>
+                    <ProjectCard id={7}/>
                 </ SliderTabletComponent>
             </MediaQuery>
             <MediaQuery minWidth={1225}>
                 <ProjectCard id={1}/>
-                <ProjectCard id={1}/>
-                <ProjectCard id={1}/>
-                <ProjectCard id={1}/>
-                <ProjectCard id={1}/>
-                <ProjectCard id={1}/>
+                <ProjectCard id={2}/>
+                <ProjectCard id={3}/>
+                <ProjectCard id={4}/>
+                <ProjectCard id={5}/>
+                <ProjectCard id={6}/>
+                <ProjectCard id={7}/>
             </MediaQuery>
         </div>
     )

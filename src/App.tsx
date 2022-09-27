@@ -9,8 +9,10 @@ import {MyProjects} from "./components/sections/myProjects/myProjects";
 import {Contacts} from "./components/sections/contacts/contacts";
 import {Footer} from "./components/footer/footer";
 import {Sections} from "./variables/sections";
-import {ParticlesComponent} from "./components/Particles/particles";
+import {MemoizedParticlesComponent, ParticlesComponent} from "./components/Particles/particles";
 import {ReactComponent} from "*.svg";
+import Cursor from "./components/common/cursor/cursor";
+import MediaQuery from "react-responsive";
 
 interface IContextState{
     activePage: Sections,
@@ -99,9 +101,12 @@ function App() {
                     <MyProjects separator={true} ref={newRef()}/>
                     <Contacts ref={newRef()} />
                     <Footer />
-                    <ParticlesComponent />
+                    <MemoizedParticlesComponent />
                 </div>
             </div>
+            <MediaQuery minWidth={1225}>
+                <Cursor/>
+            </MediaQuery>
         </GlobalContext.Provider>
   );
 }

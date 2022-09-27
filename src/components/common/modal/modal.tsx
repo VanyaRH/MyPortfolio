@@ -97,10 +97,10 @@ export const ProjectDialog = ({ isOpen, children, onSetOpen }: iProjectDialog) =
 
             <Dialog
                 fullScreen={fullScreen()}
-                maxWidth={false}
                 open={open}
                 onClose={handleClose}
                 TransitionComponent={Transition}
+                maxWidth={'lg'}
             >
                 <AppBar sx={{ position: 'relative', background: '#fff', boxShadow: 'none', color: '#000' }}>
                     <Toolbar>

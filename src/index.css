@@ -126,7 +126,7 @@ body{
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 25px;
     border-radius: 88px 12px 88px 12px/8px 92px 8px 92px;
-    background: #fc3a3a;
+    background: var(--c-gray);
 }
 
 .clip {
@@ -203,6 +203,38 @@ body{
     align-content: center;
     justify-content: center;
 }*/
+.pointer-event-none{
+    pointer-events: none;
+}
+
+* {
+    cursor: none;
+}
+
+.cursor-dot,
+.cursor-dot-outline {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    z-index: 999999;
+}
+
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #474747;
+}
+
+.cursor-dot-outline {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(168, 168, 168, 0.5);
+}
 
 @media(max-width: 1440px){
     .container{
