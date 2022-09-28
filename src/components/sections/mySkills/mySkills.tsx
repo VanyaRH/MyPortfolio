@@ -77,7 +77,7 @@ export const MySkills = React.forwardRef((props, ref:ForwardedRef<any>) => {
                         <Slide className={styles.skillInfo} triggerOnce={true} direction="left" duration={1000}>
                             <div className={styles.skillInfo}>
                                 <p className={styles.value}>
-                                    90%
+                                    70%
                                 </p>
                                 <Text customClass={styles.title} text={'Used in the work'} />
                             </div>
@@ -178,7 +178,7 @@ export const MySkills = React.forwardRef((props, ref:ForwardedRef<any>) => {
                         <Slide className={styles.skillInfo} triggerOnce={true} direction="right" duration={1000}>
                             <div className={styles.skillInfo}>
                                 <p className={styles.value}>
-                                    75%
+                                    65%
                                 </p>
                                 <Text customClass={styles.title} text={'Used in the work'} />
                             </div>
