@@ -1,4 +1,5 @@
 import {Slide} from "react-awesome-reveal";
+import {useMediaQuery} from "react-responsive";
 
 export enum Animations{
     SlideLeft = 'slideLeft',
@@ -15,8 +16,11 @@ interface Itext{
 }
 
 export const Text = (props: Itext) => {
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-width: 1224px)'
+    })
     const getType = (props: Itext) => {
-        if(props.animation){
+        if(props.animation && isDesktopOrLaptop){
             switch (props.animation){
                 case Animations.SlideLeft:
                     return <Slide triggerOnce={true} className={props.customClass || ''} direction="left">

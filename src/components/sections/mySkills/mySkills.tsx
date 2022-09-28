@@ -39,14 +39,12 @@ export const MySkills = React.forwardRef((props, ref:ForwardedRef<any>) => {
 
                     <div className={styles.separator}></div>
 
-                    <Slide className={styles.skillDescription} triggerOnce={true} direction="left" duration={1000}>
-                        <div className={`${styles.skillDescription} ${styles.left}`}>
-                            <p className={styles.skillName}>HTML</p>
-                            <Text animation={Animations.SlideLeft} customClass={styles.skillTitle} text={'HyperText Markup Language'} />
-                            <Text animation={Animations.SlideLeft} customClass={styles.skillUsingTime} text={'2018 - NOW'} />
-                            <Text animation={Animations.SlideLeft} customClass={styles.description} text={'A standardized document markup language for viewing web pages in a browser. One of the foundations for developing web applications.'} />
-                        </div>
-                    </Slide>
+                    <div className={`${styles.skillDescription} ${styles.left}`}>
+                        <p className={styles.skillName}>HTML</p>
+                        <Text animation={Animations.SlideLeft} customClass={styles.skillTitle} text={'HyperText Markup Language'} />
+                        <Text animation={Animations.SlideLeft} customClass={styles.skillUsingTime} text={'2018 - NOW'} />
+                        <Text animation={Animations.SlideLeft} customClass={styles.description} text={'A standardized document markup language for viewing web pages in a browser. One of the foundations for developing web applications.'} />
+                    </div>
 
                     <div className={styles.separator}></div>
 

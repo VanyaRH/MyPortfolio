@@ -5,6 +5,8 @@ import {ContactForm} from "./contactForm/contactForm";
 import React, {ForwardedRef} from "react";
 import {Sections} from "../../../variables/sections";
 import {Slide} from "react-awesome-reveal";
+import Cursor from "../../common/cursor/cursor";
+import MediaQuery from "react-responsive";
 
 export const Contacts = React.forwardRef((props, ref:ForwardedRef<any>) => {
     return (
@@ -31,9 +33,17 @@ export const Contacts = React.forwardRef((props, ref:ForwardedRef<any>) => {
                         <Socials/>
                     </div>
                 </div>
-                <Slide className={styles.contactsForm} triggerOnce={true} direction="right" cascade={true}>
-                    <ContactForm />
-                </Slide>
+                <MediaQuery minWidth={1225}>
+                    <Slide className={styles.contactsForm} triggerOnce={true} direction="right" cascade={true}>
+                        <ContactForm />
+                    </Slide>
+                </MediaQuery>
+                <MediaQuery maxWidth={1225}>
+                    <div className={styles.contactsForm}>
+                        <ContactForm />
+                    </div>
+                </MediaQuery>
+
             </div>
         </section>
     )

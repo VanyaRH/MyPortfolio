@@ -10,11 +10,11 @@
   height: 40vmin;
   pointer-events: none;
 }
-@media (max-width: 1225px){
+/*@media (max-width: 1225px){
   .App{
     background-image: url('./assets/images/mobile-bg.jpg');
   }
-}
+}*/
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

@@ -88,12 +88,14 @@
     right: 0;
     text-align: center;
 }
-.animateLink:hover span {
-    transform: translateY(-200%);
-}
-.animateLink:hover:after {
-    top: 50%;
-    transform: translateY(-50%);
+@media (min-width: 1225px) {
+    .animateLink:hover span {
+        transform: translateY(-200%);
+    }
+    .animateLink:hover:after {
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
 
 @keyframes rainbow {
