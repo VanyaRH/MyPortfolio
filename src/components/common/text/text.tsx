@@ -1,5 +1,7 @@
 import {Slide} from "react-awesome-reveal";
 import {useMediaQuery} from "react-responsive";
+import React from "react";
+import {ParticlesComponent} from "../../Particles/particles";
 
 export enum Animations{
     SlideLeft = 'slideLeft',
@@ -15,7 +17,7 @@ interface Itext{
     animation?: Animations
 }
 
-export const Text = (props: Itext) => {
+const TextComponent = (props: Itext) => {
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-width: 1224px)'
     })
@@ -50,3 +52,5 @@ export const Text = (props: Itext) => {
     }
     return getType(props);
 }
+
+export const Text = React.memo(TextComponent);

@@ -84,17 +84,6 @@ export const AboutInfo = React.forwardRef((props, ref:ForwardedRef<any>) => {
                 </div>
 
                 <div className={`flexRow ${styles.innerSection}`}>
-                    <MediaQuery minWidth={1225}>
-                        <Slide triggerOnce={true} className={styles.inner} direction="left" duration={500}>
-                            <div className={styles.innerList}>
-                                <Card icon={designingGif} title={'Designing'} description={`Designing the main work and functioning of the project according to the given technical task. Division into stages. A plan for full implementation, taking into account possible complications and shortcomings that will require more time.`} />
-                                <Card icon={developmentGif} title={'Development'} description={`Development of the project in compliance with all the requirements and rules specified in the previously designed plan. Completion of all tasks in a given time.`} />
-                                <Card icon={optimizationGif} title={'Optimization'} description={`Optimization of the product after its full execution and during its execution. Replacing difficult methods and algorithms with simpler ones, but with the same performance.`} />
-                                <Card icon={supportGif} title={'Support'} description={`Project support after its release. Optimization of already written code and addition of new functionality when necessary.`} />
-                            </div>
-                        </Slide>
-                    </MediaQuery>
-                    <MediaQuery maxWidth={1225}>
                         <div className={styles.inner}>
                             <div className={styles.innerList}>
                                 <Card icon={designingGif} title={'Designing'} description={`Designing the main work and functioning of the project according to the given technical task. Division into stages. A plan for full implementation, taking into account possible complications and shortcomings that will require more time.`} />
@@ -103,7 +92,6 @@ export const AboutInfo = React.forwardRef((props, ref:ForwardedRef<any>) => {
                                 <Card icon={supportGif} title={'Support'} description={`Project support after its release. Optimization of already written code and addition of new functionality when necessary.`} />
                             </div>
                         </div>
-                    </MediaQuery>
                     </div>
                 <div className="white-space-30"></div>
             </div>

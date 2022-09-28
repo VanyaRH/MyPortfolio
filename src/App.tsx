@@ -101,7 +101,7 @@ function App() {
                     <MyProjects separator={true} ref={newRef()}/>
                     <Contacts ref={newRef()} />
                     <Footer />
-                    {/*<MemoizedParticlesComponent />*/}
+                    <MemoizedParticlesComponent />
                 </div>
             </div>
             <MediaQuery minWidth={1225}>

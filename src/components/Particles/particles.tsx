@@ -26,7 +26,15 @@ export  const ParticlesComponent = (props: IParticlesProps) => {
                     enable: true, // enabling this will make the canvas fill the entire screen, it's enabled by default
                     zIndex: -1, // this is the z-index value used when the fullScreen is enabled, it's 0 by default
                 },
-                fpsLimit: 120,
+                fpsLimit: 60,
+                interactivity: {
+                    events: {
+                        onClick: {
+                            enable: true,
+                            mode: "push"
+                        },
+                    }
+                },
                 particles: {
                     color: {
                         value: "#CCCCCC",
@@ -39,22 +47,22 @@ export  const ParticlesComponent = (props: IParticlesProps) => {
                         enable: true,
                         random: false,
                         speed: 2,
-                        straight: true,
+                        straight: false,
                     },
                     number: {
                         density: {
                             enable: true,
                         },
-                        value: 80,
+                        value: 70,
                     },
                     opacity: {
-                        value: 0.5,
+                        value: 1,
                     },
                     shape: {
                         type: "circle",
                     },
                     size: {
-                        value: { min: 1, max: 5 },
+                        value: { min: 1, max: 3 },
                     },
                 },
                 detectRetina: true,

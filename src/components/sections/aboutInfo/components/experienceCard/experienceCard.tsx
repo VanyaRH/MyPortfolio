@@ -14,8 +14,7 @@ interface ExperienceCardI{
     type: ExperienceCardTypes;
 }
 
-export const ExperienceCard = (props: ExperienceCardI) => {
-
+const ExperienceCardComponent = (props: ExperienceCardI) => {
     return (
         <div className={styles.card}>
             <div className={styles.cardTitle}>
@@ -31,3 +30,5 @@ export const ExperienceCard = (props: ExperienceCardI) => {
         </div>
     )
 }
+
+export const ExperienceCard = React.memo(ExperienceCardComponent);

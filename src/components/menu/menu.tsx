@@ -1,9 +1,9 @@
 import Hamburger from 'hamburger-react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import {Menu} from "../header/menu/menu";
 import {Sections} from "../../variables/sections";
 
-export const MyMenu = () => {
+const MyMenuComponent = () => {
     const [isOpen, setOpen] = useState(false);
     const [activeSection, setActiveSection] = useState(Sections.home);
 
@@ -21,3 +21,5 @@ export const MyMenu = () => {
         </>
     )
 }
+
+export const MyMenu = React.memo(MyMenuComponent);
