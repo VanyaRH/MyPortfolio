@@ -42,34 +42,27 @@ c9.24,0,15.36-6.5,15.36-15.64c0-1.17-0.11-2.29-0.31-3.36C31.05,21,16,21,16,21z"/
             <div className="wrapper">
                 <div className={styles.connect}>
 
-                    <a href="" className="share twitter">
-                        <svg role="presentation" className="svg--icon">
-                            <use href="#svg--twitter"/>
-                        </svg>
-                        <span className="clip">TWITTER</span>
-                    </a>
-
-                    <a href="" rel="author" className="share google">
+                    <a href="mailto:rosokha.dev@gmail.com" target="_blank" rel="author"  className="share google">
                         <svg role="presentation" className="svg--icon">
                             <use href="#svg--google"/>
                             <span className="clip">GOOGLE +</span>
                         </svg>
                     </a>
 
-                    <a href="" rel="author" className="share facebook">
+                    <a href="https://www.facebook.com/vanya.rosokha" target="_blank" rel="author" className="share facebook">
                         <svg role="presentation" className="svg--icon">
                             <use href="#svg--facebook"/>
                             <span className="clip">FACEBOOK</span>
                         </svg>
                     </a>
-                    <a href="" rel="author" className="share twitter">
+                    <a href="https://www.linkedin.com/in/ivan-rosokha-3b05b319b" target="_blank" rel="author" className="share twitter">
                         <svg role="presentation" className="svg--icon">
                             <use href="#svg--linkedin"/>
                             <span className="clip">LINKEDIN</span>
                         </svg>
                     </a>
 
-                    <a href="" className="share github">
+                    <a href="https://github.com/VanyaRH" target="_blank" className="share github">
                         <svg role="presentation" className="svg--icon">
                             <use href="#svg--github"/>
                             <span className="clip">GITHUB</span>
