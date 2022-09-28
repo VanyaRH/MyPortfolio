@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/logo.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
@@ -54,5 +54,14 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script type='text/javascript'>
+      window.oncontextmenu=function(){return false;}
+      window.onkeydown = window.onkeyup = window.onkeypress = function (event) {
+        if(event.code == 'F12'){
+          window.event.returnValue = false;
+          return false;
+        }
+      }
+    </script>
   </body>
 </html>
