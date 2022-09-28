@@ -55,11 +55,13 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     <script type='text/javascript'>
-      window.oncontextmenu=function(){return false;}
-      window.onkeydown = window.onkeyup = window.onkeypress = function (event) {
-        if(event.code == 'F12'){
-          window.event.returnValue = false;
-          return false;
+      if(!location.href.startsWith('http://localhost')){
+        window.oncontextmenu=function(){return false;}
+        window.onkeydown = window.onkeyup = window.onkeypress = function (event) {
+          if(event.code == 'F12'){
+            window.event.returnValue = false;
+            return false;
+          }
         }
       }
     </script>

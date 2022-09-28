@@ -33,7 +33,7 @@ export const SliderComponent = (props: any) => {
     if(screenWidth() <= 352){
         styles.width = '300px';
     }
-    console.log(`props.children`, props.children);
+
     return (
         <div style={styles} >
             <Slider {...settings}>
@@ -77,7 +77,7 @@ export const SliderTabletComponent = (props: any) => {
         styles.width = '300px';
         settings.centerMode = false;
     }
-    console.log(`props.children`, props.children);
+
     return (
         <div style={styles}>
             <Slider className="tablet-item-wrap" {...settings}>

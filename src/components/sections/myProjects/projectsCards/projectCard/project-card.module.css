@@ -64,9 +64,16 @@
         height: auto;
     }
 }
+
+@media(max-width: 399px){
+    .card{
+        width: 310px;
+    }
+}
+
 @media(max-width: 375px){
     .card{
-        width: 320px;
+        width: 310px;
     }
 }
 
