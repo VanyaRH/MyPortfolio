@@ -19,6 +19,7 @@ export const Text = (props: Itext) => {
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-width: 1224px)'
     })
+
     const getType = (props: Itext) => {
         if(props.animation && isDesktopOrLaptop){
             switch (props.animation){
@@ -38,7 +39,7 @@ export const Text = (props: Itext) => {
                     </Slide>
                     break;
                 case Animations.SlideDown:
-                    <Slide triggerOnce={true} className={props.customClass || ''} direction="down">
+                    return <Slide triggerOnce={true} className={props.customClass || ''} direction="down">
                         {props.text}
                     </Slide>
                     break;

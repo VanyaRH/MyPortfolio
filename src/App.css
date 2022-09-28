@@ -15,6 +15,9 @@
     background-image: url('./assets/images/mobile-bg.jpg');
   }
 }*/
+.App{
+  background-image: url('./assets/images/mobile-bg.jpg');
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
