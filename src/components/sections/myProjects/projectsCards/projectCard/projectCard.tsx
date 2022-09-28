@@ -9,9 +9,10 @@ import { ProjectDialog } from "../../../../common/modal/modal";
 import {PrintText} from "../../../../common/text/printText";
 
 interface IProjectCard{
-    id: number
+    id: number,
+    onOpen: (project: any) => void;
 }
-export const ProjectCard = ({ id }: IProjectCard) => {
+export const ProjectCard = ({ id, onOpen }: IProjectCard) => {
     const project = Projects[`project-${id}`];
     const [open, setOpen] = useState(false);
 
@@ -19,8 +20,11 @@ export const ProjectCard = ({ id }: IProjectCard) => {
         return <div></div>;
     }
 
-    const showDetail = () => {
-        setOpen(true);
+    const showDetail = (e: any) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        onOpen(project);
     }
 
     return (
@@ -45,46 +49,6 @@ export const ProjectCard = ({ id }: IProjectCard) => {
                     </div>
                 </div>
             </div>
-            <ProjectDialog isOpen={open} children={<DetailProject project={project}/>} onSetOpen={setOpen}/></>
+            </>
     )
-}
-
-interface IDetailProject{
-    project: any
-}
-export const DetailProject = ({ project }: IDetailProject) => {
-    console.log(project);
-    return (<div className={`${projectItem.projectItem}`}>
-        <SliderComponent>
-            {project.images.map((img: any, index: number) => {
-                return <div key={index} className={projectItem.preview}>
-                    <img src={img} alt=""/>
-                </div> })}
-        </ SliderComponent>
-        <div className={projectItem.info}>
-            <PrintText customClass={projectItem.projectName} showCursor={false} delay={70} texts={[project.name]} />
-            <Text customClass={projectItem.projectTitle} text={project.title} />
-            <Text customClass={projectItem.projectDescription} text={project.description} />
-
-            <div className={projectItem.myInfo}>
-                <div className={projectItem.myRoleWrap}>
-                    <Text customClass={projectItem.title} text={'MY ROLE'} />
-                    {project.roles.map((role: string) => {
-                        return <Text customClass={projectItem.subTitle} text={role} />
-                    })}
-                </div>
-                <div className={projectItem.myToolsWrap}>
-                    <Text customClass={projectItem.title} text={'Tech. stack'} />
-                    {project.stack.map((role: string) => {
-                        return <Text customClass={projectItem.subTitle} text={role} />
-                    })}
-                </div>
-            </div>
-            {project.link && <div className={projectItem.previewWrap}>
-                <Text customClass={projectItem.previewText} text={'Preview:'} />
-                &nbsp;
-                <a href={project.link} className={projectItem.link} target="_blank">{project.name}</a>
-            </div>}
-        </div>
-    </div>)
 }

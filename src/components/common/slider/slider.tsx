@@ -36,7 +36,7 @@ export const SliderComponent = (props: any) => {
 
     return (
         <div style={styles} >
-            <Slider {...settings}>
+            <Slider className="tablet-item-wrap-2" {...settings}>
                 {props.children.map((child: any) => { return child })}
             </Slider>
         </div>

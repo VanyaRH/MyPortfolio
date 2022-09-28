@@ -1,35 +1,50 @@
 import styles from './projects-cards.module.css';
 import {ProjectCard} from "./projectCard/projectCard";
 import MediaQuery, { useMediaQuery } from 'react-responsive';
-import projectItem from "../projectsList/projectsList.module.css";
-import project1 from "../../../../assets/images/projects/Macbook Pro.jpg";
-import {SliderComponent, SliderTabletComponent} from "../../../common/slider/slider";
+import {SliderTabletComponent} from "../../../common/slider/slider";
+import {Projects} from "../../../../projects/projects";
+import {log} from "util";
+import {ProjectDialog} from "../../../common/modal/modal";
+import {useState} from "react";
+import {DetailProject} from "./projectDetail/projectDetail";
 
 export const ProjectCards = () => {
-    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
+
+    const [detailObject, setDetail] = useState({
+        isOpen: false,
+        project: null,
+    })
+
+    const setOpen = (open: boolean) => {
+        setDetail({
+            ...detailObject,
+            isOpen: open
+        })
+    }
+
+    const showDetail = (project: any) => {
+        setDetail({
+            ...detailObject,
+            isOpen: true,
+            project
+        })
+    }
 
     return (
         <div className={`container ${styles.wrap}`}>
             <MediaQuery maxWidth={1224}>
                 <SliderTabletComponent>
-                    <ProjectCard id={1}/>
-                    <ProjectCard id={2}/>
-                    <ProjectCard id={3}/>
-                    <ProjectCard id={4}/>
-                    <ProjectCard id={5}/>
-                    <ProjectCard id={6}/>
-                    <ProjectCard id={7}/>
+                    {Object.values(Projects).map((project: any, index: number) => {
+                        return <ProjectCard key={index} id={project.id} onOpen={(project: any) => { showDetail(project) }}/>
+                    })}
                 </ SliderTabletComponent>
             </MediaQuery>
             <MediaQuery minWidth={1225}>
-                <ProjectCard id={1}/>
-                <ProjectCard id={2}/>
-                <ProjectCard id={3}/>
-                <ProjectCard id={4}/>
-                <ProjectCard id={5}/>
-                <ProjectCard id={6}/>
-                <ProjectCard id={7}/>
+                {Object.values(Projects).map((project: any, index: number) => {
+                    return <ProjectCard key={index} id={project.id} onOpen={(project: any) => { showDetail(project) }}/>
+                })}
             </MediaQuery>
+            {detailObject.project && <ProjectDialog isOpen={detailObject.isOpen} children={<DetailProject project={detailObject.project}/>} onSetOpen={setOpen}/>}
         </div>
     )
 }
