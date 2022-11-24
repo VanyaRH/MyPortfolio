@@ -8,10 +8,10 @@ interface IMyProjects{
     separator?: boolean;
 }
 
-export const MyProjects = React.forwardRef((props: IMyProjects, ref:ForwardedRef<any>) => {
+export const MyProjects = ({ separator }:IMyProjects) => {
     return (
-        <section ref={ref} data-page={Sections.projects} id="projects" className={`${styles.wrap}`}>
-            {props?.separator && <div className={styles.separatorWrap}>
+        <section data-page={Sections.projects} id="projects" className={`${styles.wrap}`}>
+            {separator && <div className={styles.separatorWrap}>
                 <Text animation={Animations.SlideTop} customClass={styles.separator} text={'Let’s work together'} />
             </div>}
 
@@ -21,4 +21,4 @@ export const MyProjects = React.forwardRef((props: IMyProjects, ref:ForwardedRef
             <ProjectCards/>
         </section>
     )
-})
+}

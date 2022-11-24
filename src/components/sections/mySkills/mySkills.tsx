@@ -12,9 +12,9 @@ import {Sections} from "../../../variables/sections";
 import MediaQuery from "react-responsive";
 import {Slide} from "react-awesome-reveal";
 
-export const MySkills = React.forwardRef((props, ref:ForwardedRef<any>) => {
+export const MySkills = () => {
     return (
-        <section ref={ref} data-page={Sections.skills} id="skills" className={`container ${styles.wrap}`}>
+        <section data-page={Sections.skills} id="skills" className={`container ${styles.wrap}`}>
             <div className={styles.title}>
                 <Text customClass={styles.titleText} text={'My skills and knowledge'} />
             </div>
@@ -222,4 +222,4 @@ export const MySkills = React.forwardRef((props, ref:ForwardedRef<any>) => {
             </div>
         </section>
     )
-})
+}

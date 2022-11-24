@@ -8,9 +8,9 @@ import {Slide} from "react-awesome-reveal";
 import Cursor from "../../common/cursor/cursor";
 import MediaQuery from "react-responsive";
 
-export const Contacts = React.forwardRef((props, ref:ForwardedRef<any>) => {
+export const Contacts = () => {
     return (
-        <section ref={ref} data-page={Sections.contacts} id="contacts" className={`${styles.wrap}`}>
+        <section data-page={Sections.contacts} id="contacts" className={`${styles.wrap}`}>
             <div className={styles.contactsWrap}>
                 <Text animation={Animations.SlideTop} customClass={styles.title} text={'MY CONTACTS'} />
             </div>
@@ -47,4 +47,4 @@ export const Contacts = React.forwardRef((props, ref:ForwardedRef<any>) => {
             </div>
         </section>
     )
-})
+}

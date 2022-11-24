@@ -15,9 +15,9 @@ import { showCV } from '../../../helpers/showCV';
 import {MemoizedParticlesComponent} from "../../Particles/particles";
 import MediaQuery from "react-responsive";
 
-export const AboutInfo = React.forwardRef((props, ref:ForwardedRef<any>) => {
+export const AboutInfo = () => {
     return (
-        <section ref={ref} data-page={Sections.aboutMe} id="aboutMe" className={`container ${styles.container}`}>
+        <section data-page={Sections.aboutMe} id="aboutMe" className={`container ${styles.container}`}>
             <div className={styles.aboutSection}>
                 <div className={styles.avatarWrap}>
                     <Slide triggerOnce={true} cascade={true} direction="left" duration={1000}><img src={avatar} alt="Ivan Rosokha"/></Slide>
@@ -104,4 +104,4 @@ export const AboutInfo = React.forwardRef((props, ref:ForwardedRef<any>) => {
                 </div>
         </section>
     )
-})
+}

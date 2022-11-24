@@ -35,45 +35,11 @@ function App() {
         openedMenu: false
     });
 
-    setTimeout(() => { setLoader(false) }, 1000);
-
-    const refs: React.RefObject<unknown>[] = [];
-
-    const newRef = () => {
-        const ref = createRef();
-
-        refs.push(ref);
-
-        return ref;
-    };
-
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                for (let entry of entries) {
-                    if (entry.isIntersecting) {
-                        // @ts-ignore
-                        const {page} = entry.target.dataset;
-                        setContext({
-                            ...context,
-                            activePage: page
-                        });
-                    }
-                }
-            },
-            {
-                threshold: 0.5
-            }
-        );
+        let timeout = setTimeout(() => { setLoader(false) }, 1000);
 
-        refs.forEach((ref:RefObject<any>) =>
-            observer.observe(ref.current)
-        );
-
-        return () => {
-            refs.forEach((ref:RefObject<any>) => ref.current && observer.unobserve(ref.current));
-        };
-    }, []);
+        return () => { clearTimeout(timeout) };
+    }, [])
 
     const [open, setOpen] = useState(false);
     const handleClickOpen = (isOpen: boolean) => {
@@ -95,11 +61,11 @@ function App() {
                 <div className="content">
                     <Loader show={showLoader}/>
                     <Header/>
-                    <AboutTitle ref={newRef()}/>
-                    <AboutInfo ref={newRef()}/>
-                    <MySkills ref={newRef()}/>
-                    <MyProjects separator={true} ref={newRef()}/>
-                    <Contacts ref={newRef()} />
+                    <AboutTitle />
+                    <AboutInfo />
+                    <MySkills />
+                    <MyProjects separator={true} />
+                    <Contacts />
                     <Footer />
                     <MemoizedParticlesComponent />
                 </div>

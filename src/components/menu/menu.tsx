@@ -5,10 +5,8 @@ import {Sections} from "../../variables/sections";
 
 const MyMenuComponent = () => {
     const [isOpen, setOpen] = useState(false);
-    const [activeSection, setActiveSection] = useState(Sections.home);
 
-    const handleOpen = (name: Sections) => {
-        setActiveSection(name);
+    const handleOpen = () => {
         setOpen(false);
     }
 
@@ -17,7 +15,7 @@ const MyMenuComponent = () => {
     return (
         <>
             <Hamburger toggled={isOpen} toggle={setOpen} />
-            <Menu open={isOpen} activeSection={activeSection} onClick={(name) => { handleOpen(name) }} />
+            <Menu open={isOpen} onClick={() => { handleOpen() }} />
         </>
     )
 }

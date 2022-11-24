@@ -8,9 +8,9 @@ import ScrollIntoView from "react-scroll-into-view";
 import {Slide} from "react-awesome-reveal";
 
 
-export const AboutTitle = React.forwardRef((props, ref:ForwardedRef<any>) => {
+export const AboutTitle = () => {
     return (
-        <section ref={ref} id="home" data-page={Sections.home} className={`container ${styles.container}`}>
+        <section id="home" data-page={Sections.home} className={`container ${styles.container}`}>
             <Text customClass={styles.positionName} text={'Programmer'}/>
             <div className={styles.mainInfo}>
                 <Slide direction="up" cascade={true}><p className={styles.mainTitle}>IVAN ROSOKHA</p></Slide>
@@ -26,4 +26,4 @@ export const AboutTitle = React.forwardRef((props, ref:ForwardedRef<any>) => {
             </div>
         </section>
     )
-})
+};
