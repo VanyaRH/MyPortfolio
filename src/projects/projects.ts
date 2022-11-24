@@ -98,6 +98,18 @@ export const Projects:Array<IProject> = [
         roles: ['Development', 'Optimization', 'Support'],
         link: 'https://farvater.travel/',
         images: getImagesFromId(7)
+    },
+    {
+        id: 8,
+        name: `Todo application`,
+        title: 'Todo application',
+        description: 'An application for recording and managing your personal tasks.',
+        type: 'Todo application',
+        previewTitle: 'Multi-page application (Pet-project)',
+        stack: ['React', 'Redux', 'CSS3'],
+        roles: ['Development', 'Optimization', 'Support'],
+        link: 'https://todo-app-pet.vercel.app/',
+        images: getImagesFromId(8)
     }
 ]
 
