@@ -1,5 +1,5 @@
 import styles from './project-card.module.css';
-import {Projects} from "../../../../../projects/projects";
+import {getProjectFromId, Projects} from "../../../../../projects/projects";
 import {useState} from "react";
 import {SliderComponent} from "../../../../common/slider/slider";
 import project1 from "../../../../../assets/images/projects/Macbook Pro.jpg";
@@ -13,7 +13,7 @@ interface IProjectCard{
     onOpen: (project: any) => void;
 }
 export const ProjectCard = ({ id, onOpen }: IProjectCard) => {
-    const project = Projects[`project-${id}`];
+    const project = getProjectFromId(id);
     const [open, setOpen] = useState(false);
 
     if(!project){

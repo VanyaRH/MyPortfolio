@@ -1,7 +1,21 @@
-import {ProjectsImages} from "./projectsImages";
+import {getImagesFromId} from "./projectsImages";
 
-export const Projects:any = {
-    'project-1': {
+interface IProject{
+    id: number,
+    name: string,
+    title: string,
+    description: string,
+    type: string,
+    previewTitle: string,
+    stack: Array<String>,
+    roles: Array<String>,
+    link: string,
+    images: Array<any>,
+}
+
+
+export const Projects:Array<IProject> = [
+    {
         id: 1,
         name: 'Nodapes',
         title: 'Engineering the bricks that build the web3',
@@ -11,9 +25,9 @@ export const Projects:any = {
         stack: ['JavaScript', 'HTML5', 'CSS3'],
         roles: ['Development', 'Optimization', 'Support'],
         link: 'https://nodapes.com/',
-        images: ProjectsImages['project-1']
+        images: getImagesFromId(1)
     },
-    'project-2': {
+    {
         id: 2,
         name: 'NFT Marketplace',
         title: 'NFT Marketplace',
@@ -23,9 +37,9 @@ export const Projects:any = {
         stack: ['React.js', 'TypeScript'],
         roles: ['Development', 'Optimization', 'Support'],
         link: 'https://nftmonkey.online/',
-        images: ProjectsImages['project-2']
+        images: getImagesFromId(2)
     },
-    'project-3': {
+    {
         id: 3,
         name: 'Vinodex NFT Marketplace',
         title: 'Vinodex NFT Marketplace',
@@ -35,9 +49,9 @@ export const Projects:any = {
         stack: ['React.js', 'TypeScript', 'CSS'],
         roles: ['Development', 'Optimization', 'Support'],
         link: 'https://vinodex.io/',
-        images: ProjectsImages['project-3']
+        images: getImagesFromId(3)
     },
-    'project-4': {
+    {
         id: 4,
         name: `Cryptico`,
         title: 'Cryptico private messenger',
@@ -47,9 +61,9 @@ export const Projects:any = {
         stack: ['JavaScript', 'HTML5', 'CSS3'],
         roles: ['Development', 'Optimization', 'Support'],
         link: 'https://cryptico.chat/',
-        images: ProjectsImages['project-4']
+        images: getImagesFromId(4)
     },
-    'project-5': {
+    {
         id: 5,
         name: `OSBB Work`,
         title: 'OSBB Work',
@@ -59,9 +73,9 @@ export const Projects:any = {
         stack: ['JavaScript', 'HTML5', 'CSS3'],
         roles: ['Development', 'Optimization', 'Support'],
         link: 'https://osbb.work/',
-        images: ProjectsImages['project-5']
+        images: getImagesFromId(5)
     },
-    'project-6': {
+    {
         id: 6,
         name: `Money24`,
         title: 'Money24 - сurrency exchange',
@@ -71,9 +85,9 @@ export const Projects:any = {
         stack: ['JavaScript', 'HTML5', 'CSS3'],
         roles: ['Development', 'Optimization', 'Support'],
         link: 'https://money24.com.ua/',
-        images: ProjectsImages['project-6']
+        images: getImagesFromId(6)
     },
-    'project-7': {
+    {
         id: 7,
         name: `Farvater Travel`,
         title: 'Farvater Travel',
@@ -83,6 +97,11 @@ export const Projects:any = {
         stack: ['JavaScript', 'HTML5', 'CSS3'],
         roles: ['Development', 'Optimization', 'Support'],
         link: 'https://farvater.travel/',
-        images: ProjectsImages['project-7']
-    },
+        images: getImagesFromId(7)
+    }
+]
+
+export const getProjectFromId = (id: number) => {
+    const index = Projects.findIndex(x => x.id === id);
+    return index !== -1 ? Projects[index] : null;
 }
