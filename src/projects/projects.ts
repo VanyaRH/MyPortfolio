@@ -110,7 +110,19 @@ export const Projects:Array<IProject> = [
         roles: ['Development', 'Optimization', 'Support'],
         link: 'https://todo-app-pet.vercel.app/',
         images: getImagesFromId(8)
-    }
+    },
+    {
+        id: 9,
+        name: `Tic-tac-toe game`,
+        title: 'Tic-tac-toe game',
+        description: 'A game for fun and relaxation.',
+        type: 'Tic-tac-toe game',
+        previewTitle: 'Multi-page application (Pet-project)',
+        stack: ['React', 'Typescript', 'SCSS'],
+        roles: ['Development', 'Optimization', 'Support'],
+        link: 'https://tic-tac-toe-app-five.vercel.app/',
+        images: getImagesFromId(9)
+    },
 ]
 
 export const getProjectFromId = (id: number) => {

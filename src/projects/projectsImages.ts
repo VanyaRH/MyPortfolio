@@ -28,6 +28,9 @@ import project_7_3 from '../assets/images/projects/project7/project_7_3.png';
 import project_8_1 from '../assets/images/projects/project8/project_8_1.png';
 import project_8_2 from '../assets/images/projects/project8/project_8_2.png';
 
+import project_9_1 from '../assets/images/projects/project9/project_9_1.png';
+import project_9_2 from '../assets/images/projects/project9/project_9_2.png';
+
 const ProjectsImages = [
     {
         id: 1,
@@ -90,7 +93,14 @@ const ProjectsImages = [
             project_8_1,
             project_8_2,
         ]
-    }
+    },
+    {
+        id: 9,
+        images: [
+            project_9_1,
+            project_9_2,
+        ]
+    },
 ]
 
 export const getImagesFromId = (id: number) => {
